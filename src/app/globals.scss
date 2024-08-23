@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .no-spinner::-webkit-outer-spin-button,
+  .no-spinner::-webkit-inner-spin-button {
+    @apply appearance-none;
+    margin: 0;
+  }
+
+  .no-spinner {
+    @apply appearance-none;
+  }
+}
+
+@font-face {
+  font-family: 'HvDTrial Brandon Grotesque';
+  src: url('/fonts/HvDTrialBrandonGrotesque-Regular.woff2') format('woff2'),
+       url('/fonts/HvDTrialBrandonGrotesque-Regular.woff') format('woff'),
+       url('/fonts/HvDTrialBrandonGrotesque-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HvDTrial Brandon Grotesque';
+  src: url('/fonts/HvDTrialBrandonGrotesque-Bold.woff2') format('woff2'),
+       url('/fonts/HvDTrialBrandonGrotesque-Bold.woff') format('woff'),
+       url('/fonts/HvDTrialBrandonGrotesque-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "HvDTrial Brandon Grotesque", sans-serif;
+}
+
+body {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #f15e5e;
+    margin-block: 0.3rem;
+    border-radius: 1rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #1C1C1C;
+    border-radius: 1rem;
+  }
+}
+.max-Width {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  @media screen and (max-width: 768px) {
+    padding: 0 1.5rem;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 0 2rem;
+  }
+}
+
+.pagination,
+.pagination_facilities {
+  .swiper-pagination-bullet {
+    background-color: #F15E5Ebf;
+    width: 0.5rem;
+    height: 0.5rem;
+    opacity: 1;
+    border-radius: 50%;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #F15E5E;
+    width: 1rem;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+  }
+}
+
+.img_hover {
+  transition: 0.7s ease-in-out;
+  // box-shadow: none;
+  &:hover {
+    transform: scale(0.98);
+    // transition: 0.7s ease-in-out;
+    box-shadow: 10px 10px #1C1C1Cbf;
+  }
+}
