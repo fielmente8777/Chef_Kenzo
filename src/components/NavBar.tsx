@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Container from "./Container";
 import Logo from "../../public/images/logo.png";
-import { links } from "@/db/data";
 import Link from "next/link";
 const NavBar = () => {
   return (
