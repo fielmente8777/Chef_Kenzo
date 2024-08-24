@@ -5,7 +5,7 @@ const AboutUs: React.FC<TwoColCardprops> = ({
  ...aboutdataProps
 }) => {
   return (
-    <Section>
+    <Section className="lg:py-10 max-w-[1530px] mx-auto bg-no-repeat bg-[url('/images/Asset7.svg')] position_img">
       <Container>
        <TwoColGridCard  {...aboutdataProps} />
       </Container>

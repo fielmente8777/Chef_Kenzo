@@ -19,18 +19,18 @@
 
 @font-face {
   font-family: 'HvDTrial Brandon Grotesque';
-  src: url('/fonts/HvDTrialBrandonGrotesque-Regular.woff2') format('woff2'),
-       url('/fonts/HvDTrialBrandonGrotesque-Regular.woff') format('woff'),
-       url('/fonts/HvDTrialBrandonGrotesque-Regular.ttf') format('truetype');
+  src: url('/fonts/HvDTrial_Brandon_Text_Regular-BF6514e9eb617a0.woff2') format('woff2'),
+       url('/fonts/HvDTrial_Brandon_Text_Regular-BF6514e9eb617a0.woff') format('woff'),
+       url('/fonts/HvDTrial_Brandon_Text_Regular-BF6514e9eb617a0.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'HvDTrial Brandon Grotesque';
-  src: url('/fonts/HvDTrialBrandonGrotesque-Bold.woff2') format('woff2'),
-       url('/fonts/HvDTrialBrandonGrotesque-Bold.woff') format('woff'),
-       url('/fonts/HvDTrialBrandonGrotesque-Bold.ttf') format('truetype');
+  src: url('/fonts/HvDTrial_Brandon_Text_Bold-BF6514e9eb720dc.woff2') format('woff2'),
+       url('/fonts/HvDTrial_Brandon_Text_Bold-BF6514e9eb720dc.woff') format('woff'),
+       url('/fonts/HvDTrial_Brandon_Text_Bold-BF6514e9eb720dc.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
@@ -43,6 +43,9 @@
   font-family: "HvDTrial Brandon Grotesque", sans-serif;
 }
 
+b{
+  font-weight: 900;
+}
 body {
   &::-webkit-scrollbar {
     width: 0.5rem;
@@ -96,5 +99,16 @@ body {
     transform: scale(0.98);
     // transition: 0.7s ease-in-out;
     box-shadow: 10px 10px #1C1C1Cbf;
+  }
+}
+
+.position_img{
+  background-position-x: 98.5%;
+  background-position-y: 55%;
+  // background-size: contain;
+  @media screen and (max-width: 768px) {
+    background-position-x: 50%;
+    background-position-y: 50%;
+    
   }
 }

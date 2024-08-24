@@ -34,7 +34,7 @@ const Card: React.FC<CardProps> = ({
         </div>
       )}
       {icon && (
-        <div className="p-3 flex items-center justify-center">{icon}</div>
+        <div className="p-3 flex items-center justify-center group-hover:scale-110 group-hover:-translate-y-2 transition duration-1000 ease-in-out">{icon}</div>
       )}
       {data && (
         <div className="flex flex-col gap-4 py-6 px-3">

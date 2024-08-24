@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="lg:grid grid-cols-3 lg:gap-[1rem] flex flex-col gap-7">
             {/* footer logo */}
             <div className="flex lg:justify-start justify-center">
-              <div className="w-[10rem] aspect-[1/1] relative">
+              <div className="max-w-[12rem] h-[8rem] w-full aspect-[1/1] relative">
                 <Image
                   src={Logo}
                   alt="Logo"
@@ -56,7 +56,7 @@ const Footer = () => {
                       href={item.href || "#"}
                       className="text-black-primary font-normal text-lg flex gap-2"
                     >
-                      <span className="">{item.icon}</span>
+                      <span className="mt-[.3rem]">{item.icon}</span>
                       {item.label}
                     </Link>
                   </li>
@@ -67,13 +67,16 @@ const Footer = () => {
           </div>
           <div className="h-0.5 bg-red-primary my-5"></div>
           <div className="flex max-md:flex-col items-center justify-center gap-2">
-            <OutLineCopyRight />
-            <span className="text-black-primary text-center">
-              2024 Chef Kenzo
-            </span>
-            <span className="text-black-primary text-center">
-              • All rights reserved
-            </span>
+            <div className="flex gap-1">
+              <OutLineCopyRight />
+              <span className="text-black-primary text-center">
+                2024 Chef Kenzo
+              </span>{" "}
+              <span className="text-black-primary text-center">
+                • All rights reserved
+              </span>
+            </div>
+
             <span className="text-black-primary text-center">
               • Designed & Developed by Eazotel.com
             </span>

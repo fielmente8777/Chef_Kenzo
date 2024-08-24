@@ -34,7 +34,7 @@ const TwoColGridCard: React.FC<TwoColCardprops> = ({
         />
 
         {description2 && (
-          <p className="text-base text-gray-primary lg:text-justify text-center">
+          <p className="text-base text-gray-primary lg:text-start text-center">
             {description2}
           </p>
         )}

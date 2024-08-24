@@ -45,9 +45,9 @@ const Testimonials: React.FC<DataTypeProps> = ({
           classNameSwiperSlide="px-4"
         >
           {(item) => (
-            <div className="min-h-[24.5rem] flex flex-col justify-end">
+            <div className="min-h-[26rem] h-full flex flex-col justify-end px-1 pb-1 pt-2">
               <div className="relative border border-red-primary p-5 rounded-lg">
-                <div className="absolute -top-[40%] left-1/2 -translate-x-1/2 translate-y-1/2">
+                <div className="absolute lg:-top-[40%] -top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2">
                   <Image
                     src={item.image.src}
                     alt="alt"
