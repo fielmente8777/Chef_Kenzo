@@ -14,6 +14,7 @@ import {
   OurServicesDataProps,
   TestimonialsDataProps,
 } from "@/db/data";
+import Events from "@/components/Events";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <AboutUs {...aboutDataProps} />
       <OurServices {...OurServicesDataProps} />
       <Testimonials {...TestimonialsDataProps} />
+      <Events />
       <Enquiry />
       <Gallery {...GalleryDataProps} />
       <Location title={"Our Location"} src={""} />

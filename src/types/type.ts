@@ -36,6 +36,8 @@ export interface TwoColCardprops {
     };
     href: string;
     linkText: string;
+    href1: string;
+    linkText1: string;
 }
 
 export interface DataTypeProps {
@@ -54,7 +56,7 @@ export interface DataTypeProps {
             src: string;
             alt: string;
         };
-        icon?: React.ReactNode [] | React.ReactNode;
+        icon?: React.ReactNode[] | React.ReactNode;
         centerTitle?: string;
     }[];
 }
@@ -81,3 +83,4 @@ export interface ContactUsProps {
     icon?: React.ReactNode;
     traget?: boolean;
 }
+

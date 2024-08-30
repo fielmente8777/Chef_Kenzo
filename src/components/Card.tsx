@@ -12,7 +12,7 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div
-      className={`${border && "border"} group group-[&:hover]:shadow-2xl transition duration-1000 ease-in-out rounded-lg overflow-hidden w-full`}
+      className={`${border && "border"} group group-[&:hover]:shadow-2xl transition duration-1000 ease-in-out rounded-md overflow-hidden w-full`}
     >
       {image && (
         <div
@@ -39,13 +39,13 @@ const Card: React.FC<CardProps> = ({
       {data && (
         <div className="flex flex-col gap-4 py-6 px-3">
           <h3
-            className={`text-lg text-black-primary font-semibold ${center ? "text-center" : "text-start"}`}
+            className={`text-lg lg:text-[28px] text-black-primary font-light ${center ? "text-center" : "text-start"}`}
           >
             {data.title}
           </h3>
           {data.description && (
             <p
-              className={`text-base text-gray-primary ${center ? "text-center" : "text-start"}`}
+              className={`text-base lg:text-[17px] text-gray-primary ${center ? "text-center" : "text-start"}`}
             >
               {data.description}
             </p>

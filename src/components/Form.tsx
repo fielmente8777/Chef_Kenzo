@@ -10,16 +10,43 @@ const Form = () => {
   const [userMessage, setUserMessage] = useState("");
   const [userPhone, setUserPhone] = useState("");
   const [formRes, setFormRes] = useState(false);
+  const [emailErrorMessage, setEmailErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    if (value.length <= 10) {
+      setUserPhone(value);
+      setErrorMessage(value.length < 10 ? "Please enter a valid number" : "");
+    }
+  };
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setUserEmail(value);
+    setEmailErrorMessage(
+      !emailRegex.test(value) ? "Please enter a valid email address" : ""
+    );
+  };
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormRes(true);
+    if (userPhone.length !== 10) {
+      setErrorMessage("Phone number must be exactly 10 digits.");
+      return;
+    }
+
+    if (!emailRegex.test(userEmail)) {
+      setEmailErrorMessage("Please enter a valid email address.");
+      return;
+    }
+
     try {
-      const { data } = await axios.post(
-        `https://nexon.eazotel.com/eazotel/addcontacts`,
+      const { data } = await axios.post("https://nexon.eazotel.com/eazotel/addcontacts",
         {
-          // Domain: "abhijeet", // Replace with your actual domain value
-          Domain: "eracamps", // Replace with your actual domain value
+          Domain: "chefkenzo", // Replace with your actual domain value
+          // Domain: "eracamps", // Replace with your actual domain value
           email: userEmail,
           Name: userName,
           Contact: userPhone,
@@ -40,6 +67,7 @@ const Form = () => {
         setUserPhone("");
         setFormRes(false);
         alert("message sended");
+        // router.push("/thank-you");
       } else {
         setFormRes(false);
         alert("somethin wrong!");
@@ -49,6 +77,7 @@ const Form = () => {
     }
   };
 
+
   const formData = [
     {
       tag: "input",
@@ -56,6 +85,7 @@ const Form = () => {
       type: "text",
       name: "name",
       placeholder: "Your Name*",
+      required: true,
       value: userName,
       onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
         setUserName(e.target.value);
@@ -67,10 +97,9 @@ const Form = () => {
       type: "number",
       name: "phone",
       placeholder: "Your Phone*",
+      required: true,
       value: userPhone,
-      onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
-        setUserPhone(e.target.value);
-      },
+      onChange: handlePhoneChange,
     },
     {
       tag: "input",
@@ -78,17 +107,16 @@ const Form = () => {
       type: "email",
       name: "email",
       placeholder: "Your Email*",
+      required: true,
       value: userEmail,
-      onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
-        setUserEmail(e.target.value);
-      },
+      onChange: handleEmailChange,
     },
     {
       tag: "input",
       icon: <FillCalendar />,
       type: "text",
       name: "text",
-      placeholder: "Event Date*",
+      placeholder: "Event Date",
       // value: userEmail,
       onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
         // setUserEmail(e.target.value);
@@ -99,7 +127,7 @@ const Form = () => {
       icon: <FillMessage />,
       type: "text",
       name: "",
-      placeholder: "Your Message*",
+      placeholder: "Your Message",
       value: userMessage,
       onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
         setUserMessage(e.target.value);
@@ -109,7 +137,7 @@ const Form = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-4 max-md:px-4 p-6 max-md:mt-6 text-base rounded-lg lg:w-[24.5rem] w-full bg-white border border-red-primary"
+      className="flex flex-col h-full gap-4 bg-yellow-primary max-md:px-4 p-6 max-md:mt-6 text-base rounded-md w-full"
     >
       <h3 className="text-xl lg:text-[2rem]/[2.5rem] font-normal text-black-primary">
         Send <b className="capitalize">Enquiry</b> to Us!
@@ -120,8 +148,8 @@ const Form = () => {
       </p> */}
 
       {formData.map((data, index) => (
-        <div key={index} className="flex flex-col gap-1">
-          <div className="flex  gap-2 text-gray-primary p-3 border bg-white border-blue-primary rounded-md">
+        <div key={index} className="flex flex-1 flex-col gap-1">
+          <div className="flex gap-2  p-3 bg-white ">
             <label
               htmlFor={data.name}
               className={`${data.tag === "textarea" && ""}`}
@@ -135,19 +163,26 @@ const Form = () => {
               value: data.value,
               onChange: data.onChange,
               placeholder: data.placeholder,
-              required: true,
+              required: data.required,
               autoComplete: "off",
               spellCheck: "false",
-              rows: "3",
+              rows: "4",
               className:
-                "w-full bg-transparent no-spinner resize-none focus:outline-none rounded-md valid:outline-blue-primary invalid:outline-Saffron-primary",
+                "w-full bg-transparent no-spinner resize-none placeholder:text-[#4C4C4C] focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
             })}
+
           </div>
+          {data.name === "phone" && errorMessage && (
+            <p className="text-sm text-red-500 mt-2">{errorMessage}</p>
+          )}
+          {data.name === "email" && emailErrorMessage && (
+            <p className="text-sm text-red-500 mt-2">{emailErrorMessage}</p>
+          )}
         </div>
       ))}
 
-      <button className="w-full text-center bg-red-primary text-white justify-center self-center border-secondary bg-secondary text-md px-8 py-2 text-primary font-semibold rounded-md hover:bg-white hover:text-red-primary duration-300 active:scale-75 hover:scale-105 border border-red-primary">
-        {formRes ? "Loading...." : "Book Now"}
+      <button className="w-full text-center  text-black-primary bg-red-primary justify-center self-center text-md px-8 py-3 text-primary font-semibold  duration-300 active:scale-75 hover:scale-105">
+        {formRes ? "Loading...." : "Get a Quote!"}
       </button>
     </form>
   );

@@ -14,13 +14,13 @@ const Location: React.FC<{ title: string; src: string }> = ({ title, src }) => {
           <LazyLoadedMap src={src} />
         </div>
         <div className="flex justify-center mt-8">
-            <Link
-              href="#contact"
-              className="flex gap-2 px-6 capitalize bg-red-primary hover:bg-white hover:text-red-primary hover:scale-x-110 duration-700 transition rounded-lg py-3 font-medium border border-solid border-red-primary bg-primary text-black-primary"
-            >
-              Get in Touch
-            </Link>
-          </div>
+          <Link
+            href="#contact"
+            className="flex gap-2 px-6 capitalize bg-red-primary hover:bg-white hover:text-red-primary hover:scale-x-110 duration-700 transition rounded-md py-3 font-medium border border-solid border-red-primary bg-primary text-black-primary"
+          >
+            Get in Touch
+          </Link>
+        </div>
       </Container>
     </Section>
   );

@@ -53,7 +53,7 @@ export const PoliciesDataProps: ContactUsProps[] = [
 ];
 
 export const BannerData: BannerTypeProps = {
-  src: "/images/banner.webp",
+  src: "/images/newbanner.webp",
   alt: "banner",
   bgimg: {
     src: "/images/Asset46.png",
@@ -65,21 +65,26 @@ export const BannerData: BannerTypeProps = {
       description: "Years of Experience",
     },
     {
-      number: "2K+",
-      description: "Orders served",
+      number: "1500+",
+      description: "Orders served monthly",
+    },
+    {
+      number: "3",
+      description: "Kitchens in NCR",
     },
   ],
   title: "Welcome to Chef Kenzo",
-  subTitle: `Elevate Your Event with Our Exceptional <b>Catering Services.</b>`,
+  subTitle: `Experience excellence at </br> your events with our top-notch catering services`,
+  // subTitle: `Experience excellence at your events with our top-notch catering services. <b>Catering Services.</b>`,
   description:
-    "Chef Kenzo, a premier cloud kitchen in Gurgaon, specializes in premium catering for both social and corporate events.",
+    "Specializing in high-end catering for social and corporate events, our cloud kitchens in Delhi NCR & Gurgaon is second to none.",
 };
 
 export const aboutDataProps: TwoColCardprops = {
   title: "About Us",
   description: `Welcome To The Best <b class="">Catering</b> Company`,
   description2:
-    "Chef Kenzo is a distinguished cloud kitchen based in Gurgaon, dedicated to elevating the dining experience through premium catering services tailored for both social and corporate events. As a leading name in the gourmet catering industry, our focus is on providing exceptional culinary solutions that cater to the diverse needs of our clients.",
+    "Chef Kenzo Cloud Kitchen combines the expertise of top culinary talents with a commitment to excellence. Founded by young, visionary chefs from prestigious culinary institutes like IHM Pusa and IHM Aurangabad, our cloud kitchen offers a curated menu designed to provide an exceptional dining experience. We prioritize quality by using the finest ingredients and upholding the highest hygiene standards. Each dish is made-to-order in-house, ensuring freshness and flavor with every bite. Our proven track record is reflected in our outstanding ratings and positive reviews across leading food delivery platforms. Experience the artistry of culinary excellence with Chef Kenzo Cloud Kitchen, where innovation meets quality.",
 
   listItems: [
     {
@@ -97,11 +102,13 @@ export const aboutDataProps: TwoColCardprops = {
   ],
 
   image: {
-    src: "/images/about-us.webp",
+    src: "/images/newAbout.webp",
     alt: "avatar",
   },
-  linkText: "Book Now",
+  linkText: "Get A Quote!",
   href: "#",
+  linkText1: "Download Company Profile",
+  href1: "#",
 };
 
 export const OurServicesDataProps: DataTypeProps = {
@@ -109,7 +116,7 @@ export const OurServicesDataProps: DataTypeProps = {
   description: `Premium Catering Tailored to Your <b>Taste</b>`,
   link: {
     href: "#",
-    linkText: "Book Now",
+    linkText: "Get a Quote Now!",
   },
   items: [
     {
@@ -148,8 +155,8 @@ export const TestimonialsDataProps: DataTypeProps = {
   items: [
     {
       data: {
-        title: "Manika",
-        description: `"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc. Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed sapien dui. Nulla auctor sit amet sem non porta. "`,
+        title: "Apoorva Tiwari",
+        description: `Brownie really was brilliantly enrichedmust try.`,
       },
       image: {
         src: "/images/circle.png",
@@ -165,8 +172,8 @@ export const TestimonialsDataProps: DataTypeProps = {
     },
     {
       data: {
-        title: "Harshal",
-        description: `"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc. Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed sapien dui. Nulla auctor sit amet sem non porta. "`,
+        title: "Sneha Jha",
+        description: `The Mexican Burrito bowl was delicious. They also gave a complimentary Blondie dessert which was a delight! Good job. Will order again.`,
       },
       image: {
         src: "/images/circle1.png",
@@ -182,8 +189,8 @@ export const TestimonialsDataProps: DataTypeProps = {
     },
     {
       data: {
-        title: "Prakriti",
-        description: `"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc. Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed sapien dui. Nulla auctor sit amet sem non porta. "`,
+        title: "Divvya Anand",
+        description: `Chicken Popcorn was very flavoursome and a good snackie option, loved the Blondie per usual, unique & tasty dessert!`,
       },
       image: {
         src: "/images/circle2.png",
@@ -199,11 +206,11 @@ export const TestimonialsDataProps: DataTypeProps = {
     },
     {
       data: {
-        title: "Manika",
-        description: `"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc. Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed sapien dui. Nulla auctor sit amet sem non porta. "`,
+        title: "Karan",
+        description: `My go to place to order always 👏🏻`,
       },
       image: {
-        src: "/images/circle.png",
+        src: "/images/circle2.png",
         alt: "avatar",
       },
       icon: [
@@ -216,11 +223,11 @@ export const TestimonialsDataProps: DataTypeProps = {
     },
     {
       data: {
-        title: "Harshal",
-        description: `"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc. Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed sapien dui. Nulla auctor sit amet sem non porta. "`,
+        title: "AJ",
+        description: `Amazing as always. One of a very few restaurants in Gurgaon that compliments their customers. 10/10 💜`,
       },
       image: {
-        src: "/images/circle1.png",
+        src: "/images/circle2.png",
         alt: "avatar",
       },
       icon: [
@@ -233,8 +240,25 @@ export const TestimonialsDataProps: DataTypeProps = {
     },
     {
       data: {
-        title: "Prakriti",
-        description: `"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc. Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed sapien dui. Nulla auctor sit amet sem non porta. "`,
+        title: "Caliph Unknown",
+        description: `this place has incredible food shahi tukda and the blondie are insanely good great middle east platter incredible food and plentiful quantities`,
+      },
+      image: {
+        src: "/images/circle2.png",
+        alt: "avatar",
+      },
+      icon: [
+        <FillStar key={1} />,
+        <FillStar key={2} />,
+        <FillStar key={3} />,
+        <FillStar key={4} />,
+        <FillStar key={5} />,
+      ],
+    },
+    {
+      data: {
+        title: "Ankita Sachdeva",
+        description: `The best Lebanese platter I have had since a very long time .. loved it`,
       },
       image: {
         src: "/images/circle2.png",
@@ -250,6 +274,8 @@ export const TestimonialsDataProps: DataTypeProps = {
     },
   ],
 };
+
+
 
 export const GalleryDataProps: DataTypeProps = {
   title: "Gallery",

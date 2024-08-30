@@ -18,13 +18,13 @@ const config: Config = {
           "primary": '#000070'
         },
         yellow: {
-          "primary": '#F2E2BE'
+          "primary": '#D4EEF9'
         },
-        red:{
-          "primary": '#F15E5E'
+        red: {
+          "primary": '#F2B9CA'
         },
         gray: {
-          "primary": '#6E6E6E'
+          "primary": '#656565'
         },
         black: {
           "primary": '#1C1C1C'

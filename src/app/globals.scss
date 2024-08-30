@@ -6,6 +6,7 @@
   .text-balance {
     text-wrap: balance;
   }
+
   .no-spinner::-webkit-outer-spin-button,
   .no-spinner::-webkit-inner-spin-button {
     @apply appearance-none;
@@ -20,8 +21,8 @@
 @font-face {
   font-family: 'HvDTrial Brandon Grotesque';
   src: url('/fonts/HvDTrial_Brandon_Text_Regular-BF6514e9eb617a0.woff2') format('woff2'),
-       url('/fonts/HvDTrial_Brandon_Text_Regular-BF6514e9eb617a0.woff') format('woff'),
-       url('/fonts/HvDTrial_Brandon_Text_Regular-BF6514e9eb617a0.ttf') format('truetype');
+    url('/fonts/HvDTrial_Brandon_Text_Regular-BF6514e9eb617a0.woff') format('woff'),
+    url('/fonts/HvDTrial_Brandon_Text_Regular-BF6514e9eb617a0.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -29,8 +30,8 @@
 @font-face {
   font-family: 'HvDTrial Brandon Grotesque';
   src: url('/fonts/HvDTrial_Brandon_Text_Bold-BF6514e9eb720dc.woff2') format('woff2'),
-       url('/fonts/HvDTrial_Brandon_Text_Bold-BF6514e9eb720dc.woff') format('woff'),
-       url('/fonts/HvDTrial_Brandon_Text_Bold-BF6514e9eb720dc.ttf') format('truetype');
+    url('/fonts/HvDTrial_Brandon_Text_Bold-BF6514e9eb720dc.woff') format('woff'),
+    url('/fonts/HvDTrial_Brandon_Text_Bold-BF6514e9eb720dc.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
@@ -43,34 +44,40 @@
   font-family: "HvDTrial Brandon Grotesque", sans-serif;
 }
 
-b{
+b {
   font-weight: 900;
 }
+
 body {
   &::-webkit-scrollbar {
     width: 0.5rem;
     background-color: transparent;
   }
+
   &::-webkit-scrollbar-track {
     background-color: #f15e5e;
     margin-block: 0.3rem;
     border-radius: 1rem;
   }
+
   &::-webkit-scrollbar-thumb {
     background-color: #1C1C1C;
     border-radius: 1rem;
   }
 }
+
 .max-Width {
-  max-width: 1320px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 1rem;
   width: 100%;
+
   @media screen and (max-width: 768px) {
     padding: 0 1.5rem;
   }
+
   @media screen and (max-width: 480px) {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 }
 
@@ -94,6 +101,7 @@ body {
 
 .img_hover {
   transition: 0.7s ease-in-out;
+
   // box-shadow: none;
   &:hover {
     transform: scale(0.98);
@@ -102,13 +110,14 @@ body {
   }
 }
 
-.position_img{
+.position_img {
   background-position-x: 98.5%;
   background-position-y: 55%;
+
   // background-size: contain;
   @media screen and (max-width: 768px) {
     background-position-x: 50%;
     background-position-y: 50%;
-    
+
   }
 }

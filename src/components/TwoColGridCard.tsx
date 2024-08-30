@@ -11,17 +11,19 @@ const TwoColGridCard: React.FC<TwoColCardprops> = ({
   image,
   linkText,
   href,
+  linkText1,
+  href1,
   listItems,
 }) => {
   return (
     <div className="lg:grid grid-cols-2 flex flex-col gap-5">
-      <div className="relative aspect-[4/2.5] img_hover rounded-lg overflow-hidden">
+      <div className="relative  img_hover rounded-lg overflow-hidden">
         <Image
           priority={true}
           src={image.src}
           alt={`${image.alt ? image.alt : "avatar"}`}
           fill
-          className="object-cover img rounded-lg"
+          className="object-cover img rounded-md"
         />
       </div>
       <div className="flex flex-col justify-between gap-5">
@@ -34,7 +36,7 @@ const TwoColGridCard: React.FC<TwoColCardprops> = ({
         />
 
         {description2 && (
-          <p className="text-base text-gray-primary lg:text-start text-center">
+          <p className="text-base md:text-[18px]  text-gray-primary lg:text-start text-center">
             {description2}
           </p>
         )}
@@ -43,7 +45,7 @@ const TwoColGridCard: React.FC<TwoColCardprops> = ({
             {listItems.map((item, index) => (
               <li
                 key={index}
-                className="text-base text-gray-primary flex gap-2"
+                className="text-base text-black-primary font-light flex gap-2"
               >
                 <span className="">{item.icon}</span>
                 {item.description}
@@ -51,12 +53,18 @@ const TwoColGridCard: React.FC<TwoColCardprops> = ({
             ))}
           </ul>
         )}
-        <div className="flex lg:justify-start justify-center items-center">
+        <div className="flex max-sm:flex-col gap-5 lg:justify-start justify-center items-center">
           <Link
             href={href}
             className="flex gap-2 px-6 capitalize bg-red-primary hover:bg-white hover:text-red-primary hover:scale-x-110 duration-700 transition rounded-lg py-3 font-medium border border-solid border-red-primary bg-primary text-black-primary"
           >
             {linkText}
+          </Link>
+          <Link
+            href={href1}
+            className="flex gap-2 px-6 capitalize hover:bg-white hover:text-red-primary duration-700 transition py-3 font-medium text-[#1C1C1C]/50 underline"
+          >
+            {linkText1}
           </Link>
         </div>
       </div>

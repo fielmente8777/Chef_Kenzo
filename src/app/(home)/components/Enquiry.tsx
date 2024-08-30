@@ -1,10 +1,45 @@
-import { Container, Form, Section } from "@/components";
+import { Form, Section } from "@/components";
 import Image from "next/image";
+import Contact1 from "../../../../public/images/contact1.jpg"
+import Contact2 from "../../../../public/images/contact2.webp"
 
-const Enquiry: React.FC = () => {
+const Enquiry = () => {
   return (
-    <Section className="lg:pt-[8.5rem] lg:pb-[8.5rem] py-5" id="contact">
-      <div className="lg:py-14 py-5 bg-yellow-primary">
+    <Section className="max-Width  max-md:my-10 lg:pt-[2.5rem] lg:pb-[2.5rem] py-5" id="contact">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="w-full order-2 md:order-1">
+
+          <Image
+            src={Contact2}
+            alt="alt"
+            className="w-full rounded-md h-full object-cover"
+          />
+
+
+
+        </div>
+        <div className="flex flex-col gap-8 h-full w-full order-1 md:order-2 ">
+          <div className="flex flex-col gap-5">
+            <h2 className="text-2xl lg:text-[2rem]/[2.5rem] font-normal text-red-primary">
+              Get in Touch
+            </h2>
+            <h3 className="text-2xl lg:text-[2rem]/[2.5rem] font-normal text-black-primary">
+              Ready to book the catering for your{" "}special event?
+            </h3>
+          </div>
+          <Image
+            src={Contact1}
+            alt="alt"
+            className="w-full h-full rounded-md object-cover"
+          />
+        </div>
+        <div className="w-full order-3">
+          <Form />
+        </div>
+
+      </div>
+      {/* <div className="lg:py-14 py-5 bg-yellow-primary">
         <Container>
           <div className="lg:relative">
             <div className="flex flex-col items-center justify-center gap-5 max-w-[50rem]">
@@ -29,7 +64,7 @@ const Enquiry: React.FC = () => {
             </div>
           </div>
         </Container>
-      </div>
+      </div> */}
     </Section>
   );
 };
