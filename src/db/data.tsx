@@ -240,7 +240,7 @@ export const TestimonialsDataProps: DataTypeProps = {
     },
     {
       data: {
-        title: "Caliph",
+        title: "Priyam",
         description: `this place has incredible food shahi tukda and the blondie are insanely good great middle east platter incredible food and plentiful quantities`,
       },
       image: {
