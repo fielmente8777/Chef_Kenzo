@@ -21,7 +21,7 @@ const Location: React.FC<{ title: string; src: string }> = ({ title, src }) => {
             Get in Touch
           </Link>
         </div>
-        <div className="flex justify-center mt-8">
+        {/* <div className="flex justify-center mt-8">
           <Link
             href="https://www.instagram.com/thechefkenzo/"
             target="_blank"
@@ -29,7 +29,7 @@ const Location: React.FC<{ title: string; src: string }> = ({ title, src }) => {
           >
             Reach us at
           </Link>
-        </div>
+        </div> */}
       </Container>
     </Section>
   );
