@@ -27,13 +27,13 @@ const TwoColGridCard: React.FC<TwoColCardprops> = ({
         />
       </div>
       <div className="flex flex-col justify-between gap-5">
-        <h2 className="text-xl lg:text-2xl text-red-primary lg:text-start text-center">
+        <h2 className="text-xl lg:text-2xl font-semibold text-red-primary lg:text-start text-center">
           {title}
         </h2>
-        <p
+        {/* <p
           className="text-xl lg:text-[2rem]/[2.5rem] font-normal text-black-primary lg:text-start text-center"
           dangerouslySetInnerHTML={{ __html: description }}
-        />
+        /> */}
 
         {description2 && (
           <p className="text-base md:text-[18px]  text-gray-primary lg:text-start text-center">

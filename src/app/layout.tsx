@@ -30,6 +30,10 @@ export default function RootLayout({
         /> */}
 
         <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-4GB4EQCPZX"
+        />
+        <Script
           id="google-tag-manager"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{

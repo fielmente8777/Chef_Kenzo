@@ -3,8 +3,10 @@
 import { FillCalendar, FillMail, FillMessage, FillPhone, FillUser } from "@/icons/icons";
 import axios from "axios";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const Form = () => {
+  const router = useRouter();
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userMessage, setUserMessage] = useState("");
@@ -46,7 +48,7 @@ const Form = () => {
       const { data } = await axios.post("https://nexon.eazotel.com/eazotel/addcontacts",
         {
           Domain: "chefkenzo", // Replace with your actual domain value
-          // Domain: "eracamps", // Replace with your actual domain value
+          // Domain: "abhijeet", // Replace with your actual domain value
           email: userEmail,
           Name: userName,
           Contact: userPhone,
@@ -66,8 +68,7 @@ const Form = () => {
         setUserMessage("");
         setUserPhone("");
         setFormRes(false);
-        alert("message sended");
-        // router.push("/thank-you");
+        router.push("/thank-you");
       } else {
         setFormRes(false);
         alert("somethin wrong!");
@@ -111,17 +112,17 @@ const Form = () => {
       value: userEmail,
       onChange: handleEmailChange,
     },
-    {
-      tag: "input",
-      icon: <FillCalendar />,
-      type: "text",
-      name: "text",
-      placeholder: "Event Date",
-      // value: userEmail,
-      onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
-        // setUserEmail(e.target.value);
-      },
-    },
+    // {
+    //   tag: "input",
+    //   icon: <FillCalendar />,
+    //   type: "date",
+    //   name: "date",
+    //   placeholder: "Event Date",
+    //   // value: userEmail,
+    //   onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
+    //     // setUserEmail(e.target.value);
+    //   },
+    // },
     {
       tag: "textarea",
       icon: <FillMessage />,
@@ -138,6 +139,7 @@ const Form = () => {
     <form
       onSubmit={handleSubmit}
       className="flex flex-col h-full gap-4 bg-yellow-primary max-md:px-4 p-6 max-md:mt-6 text-base rounded-md w-full"
+      id="contact"
     >
       <h3 className="text-xl lg:text-[2rem]/[2.5rem] font-normal text-black-primary">
         Send <b className="capitalize">Enquiry</b> to Us!
@@ -148,7 +150,7 @@ const Form = () => {
       </p> */}
 
       {formData.map((data, index) => (
-        <div key={index} className="flex flex-1 flex-col gap-1">
+        <div key={index} className="flex flex-1 flex-col gap-1 ">
           <div className="flex gap-2  p-3 bg-white ">
             <label
               htmlFor={data.name}
@@ -166,7 +168,7 @@ const Form = () => {
               required: data.required,
               autoComplete: "off",
               spellCheck: "false",
-              rows: "4",
+              rows: "5",
               className:
                 "w-full bg-transparent no-spinner resize-none placeholder:text-[#4C4C4C] focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
             })}

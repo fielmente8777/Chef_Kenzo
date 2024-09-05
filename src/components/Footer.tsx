@@ -115,18 +115,19 @@ const Footer = () => {
 
           <div className="h-0.5 bg-red-primary my-5"></div>
           <div className="flex max-md:flex-col items-center justify-center gap-2">
-            <div className="flex gap-1">
+            <div className="flex gap-4">
               <OutLineCopyRight />
-              <span className="text-black-primary text-center">
-                2024 Chef Kenzo
+              <span className="text-[#656565] text-center">
+                2024 Kenzo Kissan India Private Limited
               </span>{" "}
-              <span className="text-black-primary text-center">
-                • All rights reserved
-              </span>
+
             </div>
 
-            <span className="text-black-primary text-center">
-              • Designed & Developed by Eazotel.com
+            <span className="text-[#656565] text-center">
+              • All rights reserved
+            </span>
+            <span className="text-[#656565] text-center">
+              • Designed & Developed by Eazotel
             </span>
           </div>
         </div>

@@ -82,22 +82,22 @@ export const BannerData: BannerTypeProps = {
 
 export const aboutDataProps: TwoColCardprops = {
   title: "About Us",
-  description: `Welcome To The Best <b class="">Catering</b> Company`,
+  description: `Welcome to Chef Kenzo`,
   description2:
     "Chef Kenzo Cloud Kitchen combines the expertise of top culinary talents with a commitment to excellence. Founded by young, visionary chefs from prestigious culinary institutes like IHM Pusa and IHM Aurangabad, our cloud kitchen offers a curated menu designed to provide an exceptional dining experience. We prioritize quality by using the finest ingredients and upholding the highest hygiene standards. Each dish is made-to-order in-house, ensuring freshness and flavor with every bite. Our proven track record is reflected in our outstanding ratings and positive reviews across leading food delivery platforms. Experience the artistry of culinary excellence with Chef Kenzo Cloud Kitchen, where innovation meets quality.",
 
   listItems: [
     {
       icon: <FillTick />,
-      description: "100% Guarantee For Our Product Quality.",
+      description: "Tailored Menu for an Enhanced Experience.",
     },
     {
       icon: <FillTick />,
-      description: "Custom Food Menu Catering & Free Delivery.",
+      description: "High-Quality Ingredients & Cleanliness.",
     },
     {
       icon: <FillTick />,
-      description: "Passionate About Food, Committed to Quality.",
+      description: "Proven track record with food delivery services receiving high ratings on various platforms.",
     },
   ],
 
@@ -116,7 +116,7 @@ export const OurServicesDataProps: DataTypeProps = {
   description: `Premium Catering Tailored to Your <b>Taste</b>`,
   link: {
     href: "#",
-    linkText: "Get a Quote Now!",
+    linkText: "Get Quote Now!",
   },
   items: [
     {
@@ -141,7 +141,7 @@ export const OurServicesDataProps: DataTypeProps = {
       data: {
         title: "Specialty Services",
         description:
-          "Our specialty services feature dietary accommodations, signature dishes, and custom packages to uniquely enhance each event.",
+          "We offer signature dishes, and custom packages to enhance your event. Enjoy an exquisite 7 to 10-course menu crafted by Michelin-star trained chefs.",
       },
       icon: <SpecialtyServices />,
       centerTitle: "Catering",
@@ -207,7 +207,7 @@ export const TestimonialsDataProps: DataTypeProps = {
     {
       data: {
         title: "Karan",
-        description: `My go to place to order always 👏🏻`,
+        description: `My go to place to order always`,
       },
       image: {
         src: "/images/circle2.png",
@@ -224,7 +224,7 @@ export const TestimonialsDataProps: DataTypeProps = {
     {
       data: {
         title: "AJ",
-        description: `Amazing as always. One of a very few restaurants in Gurgaon that compliments their customers. 10/10 💜`,
+        description: `Amazing as always. One of a very few restaurants in Gurgaon that compliments their customers. 10/10`,
       },
       image: {
         src: "/images/circle2.png",
@@ -240,7 +240,7 @@ export const TestimonialsDataProps: DataTypeProps = {
     },
     {
       data: {
-        title: "Caliph Unknown",
+        title: "Caliph",
         description: `this place has incredible food shahi tukda and the blondie are insanely good great middle east platter incredible food and plentiful quantities`,
       },
       image: {
@@ -281,53 +281,43 @@ export const GalleryDataProps: DataTypeProps = {
   title: "Gallery",
   description: `Our latest corporate and social <b>catering</b>`,
   items: [
+
     {
       image: {
-        src: "/images/Rectangle1.webp",
+        src: "/images/Copy of 202110_Chef_Kenzo_food-829.jpg",
         alt: "avatar",
       },
     },
     {
       image: {
-        src: "/images/Copy.webp",
+        src: "/images/Copy of 202110_Chef_Kenzo_food-075.jpg",
         alt: "avatar",
       },
     },
     {
       image: {
-        src: "/images/Rectangle2.webp",
+        src: "/images/Copy of 202110_Chef_Kenzo_food-456.jpg",
         alt: "avatar",
       },
     },
     {
       image: {
-        src: "/images/Rectangle3.webp",
+        src: "/images/Copy of 202203_Chef_Kenzo_food-091.jpg",
         alt: "avatar",
       },
     },
     {
       image: {
-        src: "/images/Rectangle1.webp",
+        src: "/images/Copy of 202110_Chef_Kenzo_food-343.jpg",
         alt: "avatar",
       },
     },
     {
       image: {
-        src: "/images/Copy.webp",
+        src: "/images/30011ac3-b145-4817-adb6-fcefc7530a41.jpg",
         alt: "avatar",
       },
     },
-    {
-      image: {
-        src: "/images/Rectangle2.webp",
-        alt: "avatar",
-      },
-    },
-    {
-      image: {
-        src: "/images/Rectangle3.webp",
-        alt: "avatar",
-      },
-    },
+
   ],
 };

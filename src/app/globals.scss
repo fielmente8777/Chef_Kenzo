@@ -55,13 +55,13 @@ body {
   }
 
   &::-webkit-scrollbar-track {
-    background-color: #f15e5e;
+    background-color: #F2B9CA;
     margin-block: 0.3rem;
     border-radius: 1rem;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #1C1C1C;
+    background-color: #DBEAFE;
     border-radius: 1rem;
   }
 }
@@ -84,7 +84,7 @@ body {
 .pagination,
 .pagination_facilities {
   .swiper-pagination-bullet {
-    background-color: #F15E5Ebf;
+    background-color: #DBEAFE;
     width: 0.5rem;
     height: 0.5rem;
     opacity: 1;
@@ -92,12 +92,30 @@ body {
   }
 
   .swiper-pagination-bullet-active {
-    background-color: #F15E5E;
+    background-color: #F2B9CA;
     width: 1rem;
     height: 0.5rem;
     border-radius: 0.5rem;
   }
 }
+
+.pagination-dat {
+  .swiper-pagination-bullet {
+    background-color: #fff;
+    width: 0.5rem;
+    height: 0.5rem;
+    opacity: 1;
+    border-radius: 50%;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #F2B9CA;
+    width: 1rem;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+  }
+}
+
 
 .img_hover {
   transition: 0.7s ease-in-out;

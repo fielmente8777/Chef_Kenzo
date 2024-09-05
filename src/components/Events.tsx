@@ -34,7 +34,7 @@ const Events = () => {
                                     pagination={{
                                         clickable: true,
                                         type: "bullets",
-                                        el: ".pagination-date",
+                                        el: ".pagination-dat",
                                     }}
                                     spaceBetween={10}
                                     className="mySwiper"
@@ -47,7 +47,7 @@ const Events = () => {
                                         </p>
                                     )}
                                 </SliderSwip>
-                                {/* <div className="pagination-date border pagination flex justify-center items-center mt-5 gap-1 max-md:mb-4"></div> */}
+                                {/* <div className="pagination-dat pagination flex justify-center items-center mt-5 gap-1 max-md:mb-4"></div> */}
                             </div>
 
 
@@ -57,12 +57,6 @@ const Events = () => {
                             Get a Quote Now!
                         </button>
                     </div>
-
-                    {/* <div className="flex gap-1 items-start self-center mt-6">
-                        <div className="flex shrink-0 w-2 h-2 bg-white rounded" />
-                        <div className="flex shrink-0 w-4 h-2 bg-red-200 rounded" />
-                        <div className="flex shrink-0 w-2 h-2 bg-white rounded" />
-                    </div> */}
                 </div>
             </div>
         </section>

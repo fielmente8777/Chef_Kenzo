@@ -6,7 +6,7 @@ const Location: React.FC<{ title: string; src: string }> = ({ title, src }) => {
     <Section>
       <Container>
         <div className="">
-          <h2 className="text-2xl lg:text-[2rem]/[2.5rem] font-semibold text-blue-primary text-center">
+          <h2 className="text-2xl lg:text-[2rem]/[2.5rem] font-semibold text-red-primary text-center">
             {title}
           </h2>
         </div>
@@ -16,9 +16,19 @@ const Location: React.FC<{ title: string; src: string }> = ({ title, src }) => {
         <div className="flex justify-center mt-8">
           <Link
             href="#contact"
+            target="_blank"
             className="flex gap-2 px-6 capitalize bg-red-primary hover:bg-white hover:text-red-primary hover:scale-x-110 duration-700 transition rounded-md py-3 font-medium border border-solid border-red-primary bg-primary text-black-primary"
           >
             Get in Touch
+          </Link>
+        </div>
+        <div className="flex justify-center mt-8">
+          <Link
+            href="https://www.instagram.com/thechefkenzo/"
+            target="_blank"
+            className="flex gap-2 px-6 capitalize bg-red-primary hover:bg-white hover:text-red-primary hover:scale-x-110 duration-700 transition rounded-md py-3 font-medium border border-solid border-red-primary bg-primary text-black-primary"
+          >
+            Reach us at
           </Link>
         </div>
       </Container>

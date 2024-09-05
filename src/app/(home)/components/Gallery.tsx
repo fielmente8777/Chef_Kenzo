@@ -41,7 +41,7 @@ const Gallery: React.FC<DataTypeProps> = ({ title, items, description }) => {
             classNameSwiper="mySwiper mt-10"
           >
             {(item) => (
-              <div className="w-full relative aspect-square">
+              <div className="w-full relative aspect-[4/5]">
                 <Image
                   src={item.image?.src}
                   alt="alt"
