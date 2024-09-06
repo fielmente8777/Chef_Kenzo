@@ -1,12 +1,20 @@
 "use client";
 import { Card, Container, Section, SliderSwip } from "@/components";
 import { DataTypeProps } from "@/types/type";
-import React from 'react'
+import React, { useState } from 'react'
 
 import Image from "next/image";
 import { Autoplay, Pagination } from "swiper/modules";
+import PopupForm from "./PopupForm";
 
 const Events = () => {
+
+    const [showModal, setShowModal] = useState(false);
+
+    const handleShowModal = () => {
+        setShowModal(true);
+    }
+
     const data = [
         `We've worked with a catering company in Indore to enhance their events and they had to say this: "The Chef Kenzo team is incredibly professional. They always plan well in advance, ensuring everything runs smoothly. And when it comes to taste and overall experience, they’re spot-on every time. We’ve used their services twice now, and both times have been nothing short of exceptional.`,
         `We have served prestigious corporate clients in Gurugram, such as American Express and Deloitte, both of whom had an outstanding experience with Chef Kenzo.`
@@ -53,12 +61,14 @@ const Events = () => {
 
 
                         </div>
-                        <button className="gap-2.5 self-stretch px-5 py-2.5 my-auto text-lg text-center bg-red-primary rounded text-black-primary">
+                        <button onClick={handleShowModal} className="gap-2.5 self-stretch px-5 py-2.5 my-auto text-lg text-center bg-red-primary rounded text-black-primary">
                             Get a Quote Now!
                         </button>
                     </div>
                 </div>
             </div>
+
+            {showModal && <PopupForm showModal={showModal} setShowModal={setShowModal} />}
         </section>
 
     )

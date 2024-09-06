@@ -5,6 +5,13 @@ import { OutLineCopyRight } from "@/icons/icons";
 import Link from "next/link";
 import { contactData, PoliciesDataProps } from "@/db/data";
 import { FaInstagram } from "react-icons/fa6";
+
+import { FaFacebookSquare } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+import { ImLinkedin } from "react-icons/im";
+import { SiZomato } from "react-icons/si";
+import { SiSwiggy } from "react-icons/si";
+import { IoLogoYoutube } from "react-icons/io";
 const Footer = () => {
   interface CertificateData {
     imageSrc: string;
@@ -88,14 +95,55 @@ const Footer = () => {
                     </Link>
                   </li>
                 ))}
-                <li>
+                <li className="flex gap-3 items-center">
                   <Link
                     href="https://www.instagram.com/thechefkenzo/"
                     target="_blank"
                     className="text-black-primary font-normal text-lg flex gap-2"
                   >
-                    <FaInstagram className="text-pink-300 text-2xl mt-1" />
-                    Instagram
+                    {/* <FaInstagram className="text-pink-300 text-2xl mt-1" /> */}
+                    <RiInstagramFill size={26} className="text-pink-300 text-2xl mt-1" />
+                  </Link>
+                  <Link
+                    href="https://m.facebook.com/thechefkenzo/"
+                    target="_blank"
+                    className="text-black-primary font-normal text-lg flex gap-2"
+                  >
+                    {/* <FaInstagram className="text-pink-300 text-2xl mt-1" /> */}
+                    <FaFacebookSquare size={23} className="text-pink-300 text-2xl mt-1" />
+                  </Link>
+                  <Link
+                    href="https://www.linkedin.com/company/chefkenzo/"
+                    target="_blank"
+                    className="text-black-primary font-normal text-lg flex gap-2"
+                  >
+                    {/* <FaInstagram className="text-pink-300 text-2xl mt-1" /> */}
+                    <ImLinkedin size={20} className="text-pink-300 text-2xl mt-1" />
+                  </Link>
+                  <Link
+                    href="https://m.youtube.com/@theChefkenzo"
+                    target="_blank"
+                    className="text-black-primary font-normal text-lg flex gap-2"
+                  >
+                    {/* <FaInstagram className="text-pink-300 text-2xl mt-1" /> */}
+                    <IoLogoYoutube size={22} className="text-pink-300 text-2xl mt-1" />
+                  </Link>
+                  <Link
+                    href="https://www.swiggy.com/restaurants/chef-kenzo-m-t-h-road-greater-kailash-2-delhi-799802"
+                    target="_blank"
+                    className="text-black-primary font-normal text-lg flex gap-2"
+                  >
+                    {/* <FaInstagram className="text-pink-300 text-2xl mt-1" /> */}
+                    <SiSwiggy size={20} className="text-pink-300 text-2xl mt-1" />
+                  </Link>
+                  <Link
+                    href="https://www.zomato.com/ncr/chef-kenzo-meals-from-around-the-globe-sushant-lok-gurgaon?amp=1"
+                    target="_blank"
+                    className="text-black-primary font-normal text-lg flex gap-2"
+                  >
+                    {/* <FaInstagram className="text-pink-300 text-2xl mt-1" /> */}
+                    <SiZomato size={35} className="text-pink-300 text-2xl mt-1" />
+
                   </Link>
                 </li>
               </ul>

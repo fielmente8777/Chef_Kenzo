@@ -128,7 +128,8 @@ const Form = () => {
       icon: <FillMessage />,
       type: "text",
       name: "",
-      placeholder: "Your Message",
+      placeholder: "Your Message*",
+      required: true,
       value: userMessage,
       onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
         setUserMessage(e.target.value);

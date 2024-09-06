@@ -155,6 +155,23 @@ export const TestimonialsDataProps: DataTypeProps = {
   items: [
     {
       data: {
+        title: "Ritika Sharma,",
+        description: `We recently hired Chef Kenzo for our lunch at the office, and the food was absolutely amazing! Every dish was packed with flavor, and the presentation was top-notch. Our team couldn’t stop talking about the fusion options. Chef Kenzo truly elevated the entire experience. Highly recommend for any corporate event!`,
+      },
+      image: {
+        src: "/images/circle.png",
+        alt: "avatar",
+      },
+      icon: [
+        <FillStar key={1} />,
+        <FillStar key={2} />,
+        <FillStar key={3} />,
+        <FillStar key={4} />,
+        <FillStar key={5} />,
+      ],
+    },
+    {
+      data: {
         title: "Apoorva Tiwari",
         description: `Brownie really was brilliantly enrichedmust try.`,
       },
@@ -206,6 +223,23 @@ export const TestimonialsDataProps: DataTypeProps = {
     },
     {
       data: {
+        title: "Anil Mehta",
+        description: `Chef Kenzo provided catering for our corporate seminar, and it was a hit. The quality, taste, and variety were impressive, and everything arrived fresh and on time. The service was professional, and they really understood our needs. Will definitely be using them again for future events!`,
+      },
+      image: {
+        src: "/images/circle2.png",
+        alt: "avatar",
+      },
+      icon: [
+        <FillStar key={1} />,
+        <FillStar key={2} />,
+        <FillStar key={3} />,
+        <FillStar key={4} />,
+        <FillStar key={5} />,
+      ],
+    },
+    {
+      data: {
         title: "Karan",
         description: `My go to place to order always`,
       },
@@ -242,6 +276,23 @@ export const TestimonialsDataProps: DataTypeProps = {
       data: {
         title: "Priyam",
         description: `this place has incredible food shahi tukda and the blondie are insanely good great middle east platter incredible food and plentiful quantities`,
+      },
+      image: {
+        src: "/images/circle2.png",
+        alt: "avatar",
+      },
+      icon: [
+        <FillStar key={1} />,
+        <FillStar key={2} />,
+        <FillStar key={3} />,
+        <FillStar key={4} />,
+        <FillStar key={5} />,
+      ],
+    },
+    {
+      data: {
+        title: "Nisha Verma",
+        description: `We entrusted Chef Kenzo with a large-scale event, and they exceeded expectations. From the perfectly curated menu to the prompt delivery, everything was seamless. The team was professional, and the food was well-received by all. Chef Kenzo truly knows how to cater to corporate clients.`,
       },
       image: {
         src: "/images/circle2.png",

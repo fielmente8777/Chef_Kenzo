@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* <Script
+        <Script
           id="clarity-analytics"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -25,9 +25,9 @@ export default function RootLayout({
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "nqorxhu8vm");`,
+    })(window, document, "clarity", "script", "nywx9qe1l3");`,
           }}
-        /> */}
+        />
 
         <Script
           strategy="afterInteractive"
@@ -50,7 +50,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           id="google-conversion-tracking"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: `gtag('event', 'conversion', {'send_to': 'AW-16573044562/haV-CM38_88ZENKu0t49'});`,
+            __html: ` gtag('event', 'conversion', {'send_to': 'AW-16573044562/ci9-CK70p9AZENKu0t49'});`,
           }}
         />
         <Script

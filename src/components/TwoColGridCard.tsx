@@ -1,8 +1,11 @@
+"use client"
 import Image from "next/image";
 import Container from "./Container";
 import Section from "./Section";
 import Link from "next/link";
 import { TwoColCardprops } from "@/types/type";
+import { useState } from "react";
+import PopupForm from "./PopupForm";
 
 const TwoColGridCard: React.FC<TwoColCardprops> = ({
   title,
@@ -15,6 +18,25 @@ const TwoColGridCard: React.FC<TwoColCardprops> = ({
   href1,
   listItems,
 }) => {
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => {
+    setShowModal(true);
+  }
+
+  const handleDownloadPDF = () => {
+    // The path to the PDF file stored in the public folder
+    const fileUrl = 'images/CompanyProfile.pdf';
+
+    // Create an anchor element and trigger the download
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.setAttribute('download', 'Company_Profile.pdf'); // Optional: Specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link); // Clean up the element after download
+  };
   return (
     <div className="lg:grid grid-cols-2 flex flex-col gap-5">
       <div className="relative  img_hover rounded-lg overflow-hidden">
@@ -54,20 +76,24 @@ const TwoColGridCard: React.FC<TwoColCardprops> = ({
           </ul>
         )}
         <div className="flex max-sm:flex-col gap-5 lg:justify-start justify-center items-center">
-          <Link
-            href={href}
+          <button
+            onClick={handleShowModal}
+            // href={href}
             className="flex gap-2 px-6 capitalize bg-red-primary hover:bg-white hover:text-red-primary hover:scale-x-110 duration-700 transition rounded-lg py-3 font-medium border border-solid border-red-primary bg-primary text-black-primary"
           >
             {linkText}
-          </Link>
-          <Link
-            href={href1}
+          </button>
+          <button
+            onClick={handleDownloadPDF}
             className="flex gap-2 px-6 capitalize hover:bg-white hover:text-red-primary duration-700 transition py-3 font-medium text-[#1C1C1C]/50 underline"
           >
             {linkText1}
-          </Link>
+          </button>
         </div>
       </div>
+
+
+      {showModal && <PopupForm showModal={showModal} setShowModal={setShowModal} />}
     </div>
   );
 };
