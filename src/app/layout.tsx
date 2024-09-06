@@ -46,7 +46,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             `,
           }}
         />
-
+        <Script
+          id="google-conversion-tracking"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `gtag('event', 'conversion', {'send_to': 'AW-16573044562/haV-CM38_88ZENKu0t49'});`,
+          }}
+        />
         <Script
           id="google-analytics"
           strategy="afterInteractive"
@@ -61,7 +67,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <body suppressHydrationWarning={true}>
         {/* <!-- Google Tag Manager (noscript) --> */}
         <noscript>
-
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PT5DTZ4X"
             height="0"

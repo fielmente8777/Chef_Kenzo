@@ -13,7 +13,7 @@ const ThankUPopUp = () => {
     // Google Ads Conversion Tracking
     const script = document.createElement('script');
     script.innerHTML = `
-      gtag('event', 'conversion', {'send_to': 'AW-16668758737/GIgUCNnV9swZENGlpIw-'});
+      gtag('event', 'conversion', {'send_to': 'AW-16573044562/haV-CM38_88ZENKu0t49'});
     `;
     document.head.appendChild(script);
   }, []);
