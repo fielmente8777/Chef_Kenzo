@@ -139,10 +139,10 @@ const Footer = () => {
                   <Link
                     href="https://www.zomato.com/ncr/chef-kenzo-meals-from-around-the-globe-sushant-lok-gurgaon?amp=1"
                     target="_blank"
-                    className="text-black-primary font-normal text-lg flex gap-2"
+                    className="text-black-primary font-normal flex gap-2"
                   >
                     {/* <FaInstagram className="text-pink-300 text-2xl mt-1" /> */}
-                    <SiZomato size={35} className="text-pink-300 text-2xl mt-1" />
+                    <SiZomato size={35} className="text-pink-300 mt-1" />
 
                   </Link>
                 </li>
