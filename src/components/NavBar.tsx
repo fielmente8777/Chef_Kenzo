@@ -22,7 +22,7 @@ const NavBar = () => {
     <header className="py-5">
       <Container>
         <div className="w-full flex justify-between items-center">
-          <div className="relative aspect-[1/1] lg:w-[6.5rem] w-[55px]">
+          <Link href="/" className="relative aspect-[1/1] lg:w-[6.5rem] w-[55px]">
             <Image
               src={Logo}
               alt="Logo"
@@ -30,7 +30,7 @@ const NavBar = () => {
               fill
               className="object-contain"
             />
-          </div>
+          </Link>
           <div className="flex items-center justify-center gap-4">
             {/* <ul className="lg:flex hidden gap-4 items-center justify-center">
               {links.map((item, index) => (
