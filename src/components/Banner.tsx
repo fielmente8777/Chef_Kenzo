@@ -54,10 +54,10 @@ const Banner: React.FC<BannerTypeProps> = ({
               >
                 {(item) => (
                   <div className="flex flex-col gap-2 items-center justify-center">
-                    <span className="text-4xl font-black">
+                    <span className="text-3xl font-black">
                       {item.number}
                     </span>
-                    <span className="text-base">{item.description}</span>
+                    <span className="text-sm font-medium">{item.description}</span>
                   </div>
                 )}
               </SliderSwip>

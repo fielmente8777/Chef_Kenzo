@@ -11,14 +11,14 @@ export const OutLineLocation = () => (
       stroke="#F2B9CA"
       strokeWidth="1.5"
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
     />
     <path
       d="M20.8465 9.72656C20.8465 16.8669 13.0358 20.974 13.0358 20.974C13.0358 20.974 5.2251 16.8669 5.2251 9.72656C5.2251 7.73789 6.04801 5.83067 7.5128 4.42447C8.9776 3.01827 10.9643 2.22827 13.0358 2.22827C15.1073 2.22827 17.094 3.01827 18.5588 4.42447C20.0236 5.83067 20.8465 7.73789 20.8465 9.72656Z"
       stroke="#F2B9CA"
       strokeWidth="1.5"
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

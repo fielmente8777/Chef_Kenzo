@@ -58,6 +58,7 @@ const Form = () => {
       const { data } = await axios.post(
         "https://nexon.eazotel.com/eazotel/addcontacts",
         {
+          // Domain:'abhijeet',
           Domain: "chefkenzo", // Replace with your actual domain value
           email: userEmail,
           Name: userName,
@@ -79,7 +80,7 @@ const Form = () => {
         setUserPhone("");
         setCountryCode("+91"); // Reset country code
         setFormRes(false);
-        router.push("/thank-you");
+        router.push("/thank-you/");
       } else {
         setFormRes(false);
         alert("Something went wrong!");
@@ -134,7 +135,7 @@ const Form = () => {
             placeholder="Your Phone*"
             value={userPhone}
             onChange={handlePhoneChange}
-            className="flex-1 bg-transparent rounded-md placeholder:text-black-primary text-black no-spinner focus:outline-none"
+            className="w-full bg-transparent rounded-md placeholder:text-black-primary text-black no-spinner focus:outline-none"
           />
         </div>
       ),

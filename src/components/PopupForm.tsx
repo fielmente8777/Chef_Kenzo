@@ -8,16 +8,27 @@ const PopupForm = ({ showModal, setShowModal }: any) => {
   // const [openPopup, setOpenPopup] = useState(false);
   // const [popupMsg, setPopupMsg] = useState("");
 
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = "hidden"; // Disable scrolling when modal is open
+    } else {
+      document.body.style.overflow = "auto"; // Re-enable scrolling when modal closes
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"; // Cleanup when component unmounts
+    };
+  }, [showModal]);
 
   const closeModal = () => {
     setShowModal(false);
-  }
+  };
 
   return (
     <>
       {showModal && (
         <section className="fixed z-50 w-full bg-white/70 h-screen bg-black top-0 left-0 ">
-          <article className="flex justify-center items-center h-full py-20 overflow-y-auto overflow-x-hidden max-md:px-4">
+          <article className="flex justify-center items-center h-full py-20 max-md:px-4">
             <div className="w-full max-w-4xl max-md:mt-20 shadow-xl p-4 relative rounded-md border-2 border-pink-400 bg-white">
               <button
                 onClick={closeModal}

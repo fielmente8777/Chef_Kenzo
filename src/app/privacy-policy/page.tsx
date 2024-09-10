@@ -110,7 +110,7 @@ const page = () => {
                   </h3>
                 )}
                 {item.text && (
-                  <p className="text-gray-primary text-lg mt-4">
+                  <p className="text-gray-primary text-lg mt-4 break-words">
                     {item.span && (
                       <span className="text-black-primary">{item.span}</span>
                     )}
