@@ -7,7 +7,7 @@ const NavBar = () => {
     <header className="py-5">
       <Container>
         <div className="w-full flex justify-between items-center">
-          <div className="relative aspect-[1/1] lg:w-[6.5rem] w-[55px]">
+          <div className="relative aspect-[1/1] lg:w-[6.5rem] w-[5.5rem]">
             <Image
               src={Logo}
               alt="Logo"
