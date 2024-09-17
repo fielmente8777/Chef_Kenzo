@@ -1,9 +1,16 @@
 "use client";
 
-import { FillCalendar, FillMail, FillMessage, FillPhone, FillUser } from "@/icons/icons";
+import {
+  FillCalendar,
+  FillMail,
+  FillMessage,
+  FillPhone,
+  FillUser,
+} from "@/icons/icons";
 import axios from "axios";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { countries } from "@/db/countryCode";
 
 const Form = () => {
   const router = useRouter();
@@ -11,13 +18,14 @@ const Form = () => {
   const [userEmail, setUserEmail] = useState("");
   const [userMessage, setUserMessage] = useState("");
   const [userPhone, setUserPhone] = useState("");
+  const [countryCode, setCountryCode] = useState("+91"); // Default country code
   const [formRes, setFormRes] = useState(false);
   const [emailErrorMessage, setEmailErrorMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
+    const value = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
     if (value.length <= 10) {
       setUserPhone(value);
       setErrorMessage(value.length < 10 ? "Please enter a valid number" : "");
@@ -31,9 +39,11 @@ const Form = () => {
       !emailRegex.test(value) ? "Please enter a valid email address" : ""
     );
   };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormRes(true);
+
     if (userPhone.length !== 10) {
       setErrorMessage("Phone number must be exactly 10 digits.");
       return;
@@ -45,14 +55,14 @@ const Form = () => {
     }
 
     try {
-      const { data } = await axios.post("https://nexon.eazotel.com/eazotel/addcontacts",
+      const { data } = await axios.post(
+        "https://nexon.eazotel.com/eazotel/addcontacts",
         {
+          // Domain:'abhijeet',
           Domain: "chefkenzo", // Replace with your actual domain value
-          // Domain: "abhijeet", // Replace with your actual domain value
           email: userEmail,
           Name: userName,
-          Contact: userPhone,
-          // Subject: userMessage,
+          Contact: `${countryCode}${userPhone}`, // Combine country code and phone number
           Description: userMessage,
         },
         {
@@ -61,23 +71,24 @@ const Form = () => {
           },
         }
       );
+
       if (data.Status) {
         setFormRes(true);
         setUserName("");
         setUserEmail("");
         setUserMessage("");
         setUserPhone("");
+        setCountryCode("+91"); // Reset country code
         setFormRes(false);
-        router.push("/thank-you");
+        router.push("/thank-you/");
       } else {
         setFormRes(false);
-        alert("somethin wrong!");
+        alert("Something went wrong!");
       }
     } catch (error) {
       console.log(error);
     }
   };
-
 
   const formData = [
     {
@@ -93,14 +104,41 @@ const Form = () => {
       },
     },
     {
-      tag: "input",
+      tag: "div", // Use div to wrap select and input for phone number
       icon: <FillPhone />,
-      type: "number",
       name: "phone",
       placeholder: "Your Phone*",
       required: true,
-      value: userPhone,
-      onChange: handlePhoneChange,
+      content: (
+        <div className="flex gap-2 text-base">
+          <select
+            id="countryCode"
+            name="countryCode"
+            value={countryCode}
+            onChange={(e) => setCountryCode(e.target.value)}
+            className="w-auto bg-transparent rounded-lg text-[#333333] focus:outline-none"
+          >
+            {countries.map((country, index) => (
+              <option
+                key={index}
+                value={country.code}
+                className="text-black bg-gray-100"
+              >
+                {`${country.code}`}
+              </option>
+            ))}
+          </select>
+          <input
+            type="number"
+            id="phone"
+            name="phone"
+            placeholder="Your Phone*"
+            value={userPhone}
+            onChange={handlePhoneChange}
+            className="w-full bg-transparent rounded-md placeholder:text-black-primary text-black no-spinner focus:outline-none"
+          />
+        </div>
+      ),
     },
     {
       tag: "input",
@@ -112,17 +150,6 @@ const Form = () => {
       value: userEmail,
       onChange: handleEmailChange,
     },
-    // {
-    //   tag: "input",
-    //   icon: <FillCalendar />,
-    //   type: "date",
-    //   name: "date",
-    //   placeholder: "Event Date",
-    //   // value: userEmail,
-    //   onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
-    //     // setUserEmail(e.target.value);
-    //   },
-    // },
     {
       tag: "textarea",
       icon: <FillMessage />,
@@ -136,6 +163,7 @@ const Form = () => {
       },
     },
   ];
+
   return (
     <form
       onSubmit={handleSubmit}
@@ -145,35 +173,32 @@ const Form = () => {
       <h3 className="text-xl lg:text-[2rem]/[2.5rem] font-normal text-black-primary">
         Send <b className="capitalize">Enquiry</b> to Us!
       </h3>
-      {/* <p className="text-gray-primary max-md:text-sm">
-        Fill in your details and a Venue Specialist will get back to you
-        shortly.
-      </p> */}
 
       {formData.map((data, index) => (
-        <div key={index} className="flex flex-1 flex-col gap-1 ">
-          <div className="flex gap-2  p-3 bg-white ">
+        <div key={index} className="flex flex-1 flex-col gap-1">
+          <div className="flex gap-2 p-3 bg-white">
             <label
               htmlFor={data.name}
               className={`${data.tag === "textarea" && ""}`}
             >
               {data.icon}
             </label>
-            {React.createElement(data.tag, {
-              id: data.name,
-              type: data.type,
-              name: data.name,
-              value: data.value,
-              onChange: data.onChange,
-              placeholder: data.placeholder,
-              required: data.required,
-              autoComplete: "off",
-              spellCheck: "false",
-              rows: "5",
-              className:
-                "w-full bg-transparent no-spinner resize-none placeholder:text-[#4C4C4C] focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
-            })}
-
+            {data.tag === "div"
+              ? data.content
+              : React.createElement(data.tag, {
+                  id: data.name,
+                  type: data.type,
+                  name: data.name,
+                  value: data.value,
+                  onChange: data.onChange,
+                  placeholder: data.placeholder,
+                  required: data.required,
+                  autoComplete: "off",
+                  spellCheck: "false",
+                  rows: "5",
+                  className:
+                    "w-full bg-transparent no-spinner resize-none placeholder:text-[#4C4C4C] focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
+                })}
           </div>
           {data.name === "phone" && errorMessage && (
             <p className="text-sm text-red-500 mt-2">{errorMessage}</p>
@@ -184,7 +209,7 @@ const Form = () => {
         </div>
       ))}
 
-      <button className="w-full text-center  text-black-primary bg-red-primary justify-center self-center text-md px-8 py-3 text-primary font-semibold  duration-300 active:scale-75 hover:scale-105">
+      <button className="w-full text-center text-black-primary bg-red-primary justify-center self-center text-md px-8 py-3 font-semibold duration-300 active:scale-75 hover:scale-105">
         {formRes ? "Loading...." : "Get a Quote!"}
       </button>
     </form>

@@ -46,7 +46,10 @@ const Footer = () => {
           <div className="lg:grid grid-cols-3 lg:gap-[1rem] flex flex-col gap-7">
             {/* footer logo */}
             <div className="flex lg:justify-start justify-center">
-              <div className="max-w-[12rem] h-[8rem] w-full aspect-[1/1] relative">
+              <Link
+                href="/"
+                className="max-w-[12rem] h-[8rem] w-full aspect-[1/1] relative"
+              >
                 <Image
                   src={Logo}
                   alt="Logo"
@@ -54,7 +57,7 @@ const Footer = () => {
                   fill
                   className="object-contain"
                 />
-              </div>
+              </Link>
             </div>
             {/* footer logo end */}
 
@@ -102,7 +105,10 @@ const Footer = () => {
                     className="text-black-primary font-normal text-lg flex gap-2"
                   >
                     {/* <FaInstagram className="text-pink-300 text-2xl mt-1" /> */}
-                    <RiInstagramFill size={26} className="text-pink-300 text-2xl mt-1" />
+                    <RiInstagramFill
+                      size={26}
+                      className="text-pink-300 text-2xl mt-1"
+                    />
                   </Link>
                   <Link
                     href="https://m.facebook.com/thechefkenzo/"
@@ -110,7 +116,10 @@ const Footer = () => {
                     className="text-black-primary font-normal text-lg flex gap-2"
                   >
                     {/* <FaInstagram className="text-pink-300 text-2xl mt-1" /> */}
-                    <FaFacebookSquare size={23} className="text-pink-300 text-2xl mt-1" />
+                    <FaFacebookSquare
+                      size={23}
+                      className="text-pink-300 text-2xl mt-1"
+                    />
                   </Link>
                   <Link
                     href="https://www.linkedin.com/company/chefkenzo/"
@@ -118,7 +127,10 @@ const Footer = () => {
                     className="text-black-primary font-normal text-lg flex gap-2"
                   >
                     {/* <FaInstagram className="text-pink-300 text-2xl mt-1" /> */}
-                    <ImLinkedin size={20} className="text-pink-300 text-2xl mt-1" />
+                    <ImLinkedin
+                      size={20}
+                      className="text-pink-300 text-2xl mt-1"
+                    />
                   </Link>
                   <Link
                     href="https://m.youtube.com/@theChefkenzo"
@@ -126,7 +138,10 @@ const Footer = () => {
                     className="text-black-primary font-normal text-lg flex gap-2"
                   >
                     {/* <FaInstagram className="text-pink-300 text-2xl mt-1" /> */}
-                    <IoLogoYoutube size={22} className="text-pink-300 text-2xl mt-1" />
+                    <IoLogoYoutube
+                      size={22}
+                      className="text-pink-300 text-2xl mt-1"
+                    />
                   </Link>
                   <Link
                     href="https://www.swiggy.com/restaurants/chef-kenzo-m-t-h-road-greater-kailash-2-delhi-799802"
@@ -134,7 +149,10 @@ const Footer = () => {
                     className="text-black-primary font-normal text-lg flex gap-2"
                   >
                     {/* <FaInstagram className="text-pink-300 text-2xl mt-1" /> */}
-                    <SiSwiggy size={20} className="text-pink-300 text-2xl mt-1" />
+                    <SiSwiggy
+                      size={20}
+                      className="text-pink-300 text-2xl mt-1"
+                    />
                   </Link>
                   <Link
                     href="https://www.zomato.com/ncr/chef-kenzo-meals-from-around-the-globe-sushant-lok-gurgaon?amp=1"
@@ -143,7 +161,6 @@ const Footer = () => {
                   >
                     {/* <FaInstagram className="text-pink-300 text-2xl mt-1" /> */}
                     <SiZomato size={35} className="text-pink-300 mt-1" />
-
                   </Link>
                 </li>
               </ul>
