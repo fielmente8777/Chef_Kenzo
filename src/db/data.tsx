@@ -84,7 +84,7 @@ export const aboutDataProps: TwoColCardprops = {
   title: "About Us",
   description: `Welcome to Chef Kenzo`,
   description2:
-    "Chef Kenzo Cloud Kitchen combines the expertise of top culinary talents with a commitment to excellence. Founded by young, visionary chefs from prestigious culinary institutes like IHM Pusa and IHM Aurangabad, our cloud kitchen offers a curated menu designed to provide an exceptional dining experience. We prioritize quality by using the finest ingredients and upholding the highest hygiene standards. Each dish is made-to-order in-house, ensuring freshness and flavor with every bite. Our proven track record is reflected in our outstanding ratings and positive reviews across leading food delivery platforms. Experience the artistry of culinary excellence with Chef Kenzo Cloud Kitchen, where innovation meets quality.",
+    "Chef Kenzo Cloud Kitchen delivers exceptional catering experiences designed to elevate weddings, corporate events, and house parties. Our team of visionary chefs, trained at prestigious institutes like IHM Pusa and IHM Aurangabad, crafts curated menus using the finest ingredients to ensure each dish is fresh and flavorful. Specializing in bulk catering, we bring restaurant-quality food to your event, tailored to your unique needs. With over 500 successful events and a 98% client satisfaction rate, we ensure seamless service from start to finish. Whether it’s an intimate gathering or a large-scale function, our culinary team guarantees a memorable dining experience. With a track record of 5-star reviews and a 95% repeat client rate, Chef Kenzo Cloud Kitchen is your trusted partner for unforgettable catered events.",
 
   listItems: [
     {
