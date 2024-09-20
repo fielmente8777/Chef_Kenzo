@@ -18,7 +18,7 @@ const Form = () => {
   const [userEmail, setUserEmail] = useState("");
   const [userMessage, setUserMessage] = useState("");
   const [userPhone, setUserPhone] = useState("");
-  const [countryCode, setCountryCode] = useState("+91"); // Default country code
+  // const [countryCode, setCountryCode] = useState("+91"); // Default country code
   const [formRes, setFormRes] = useState(false);
   const [emailErrorMessage, setEmailErrorMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -58,11 +58,11 @@ const Form = () => {
       const { data } = await axios.post(
         "https://nexon.eazotel.com/eazotel/addcontacts",
         {
-          // Domain:'abhijeet',
+          // Domain: 'abhijeet',
           Domain: "chefkenzo", // Replace with your actual domain value
           email: userEmail,
           Name: userName,
-          Contact: `${countryCode}${userPhone}`, // Combine country code and phone number
+          Contact: userPhone, // Combine country code and phone number
           Description: userMessage,
         },
         {
@@ -78,7 +78,7 @@ const Form = () => {
         setUserEmail("");
         setUserMessage("");
         setUserPhone("");
-        setCountryCode("+91"); // Reset country code
+        // setCountryCode("+91"); // Reset country code
         setFormRes(false);
         router.push("/thank-you/");
       } else {
@@ -111,7 +111,7 @@ const Form = () => {
       required: true,
       content: (
         <div className="flex gap-2 text-base">
-          <select
+          {/* <select
             id="countryCode"
             name="countryCode"
             value={countryCode}
@@ -127,7 +127,7 @@ const Form = () => {
                 {`${country.code}`}
               </option>
             ))}
-          </select>
+          </select> */}
           <input
             type="number"
             id="phone"
@@ -135,7 +135,7 @@ const Form = () => {
             placeholder="Your Phone*"
             value={userPhone}
             onChange={handlePhoneChange}
-            className="w-full bg-transparent rounded-md placeholder:text-black-primary text-black no-spinner focus:outline-none"
+            className="w-full bg-transparent rounded-md placeholder:text-[#4C4C4C] text-black no-spinner focus:outline-none"
           />
         </div>
       ),
@@ -186,19 +186,19 @@ const Form = () => {
             {data.tag === "div"
               ? data.content
               : React.createElement(data.tag, {
-                  id: data.name,
-                  type: data.type,
-                  name: data.name,
-                  value: data.value,
-                  onChange: data.onChange,
-                  placeholder: data.placeholder,
-                  required: data.required,
-                  autoComplete: "off",
-                  spellCheck: "false",
-                  rows: "5",
-                  className:
-                    "w-full bg-transparent no-spinner resize-none placeholder:text-[#4C4C4C] focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
-                })}
+                id: data.name,
+                type: data.type,
+                name: data.name,
+                value: data.value,
+                onChange: data.onChange,
+                placeholder: data.placeholder,
+                required: data.required,
+                autoComplete: "off",
+                spellCheck: "false",
+                rows: "5",
+                className:
+                  "w-full bg-transparent no-spinner resize-none placeholder:text-[#4C4C4C] focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
+              })}
           </div>
           {data.name === "phone" && errorMessage && (
             <p className="text-sm text-red-500 mt-2">{errorMessage}</p>
