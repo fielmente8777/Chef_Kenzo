@@ -4,8 +4,8 @@ import { Call, Footer, NavBar, Whatsapp } from "@/components";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Chef Kenzo - Catering Services",
-  description: "We know you&#39;re here for the food shots??🤤",
+  title: "Chef Kenzo Cloud Kitchen | Premium Catering in Delhi NCR & Gurgaon",
+  description: "High-end catering for corporate events, weddings & parties. Michelin-trained chefs, curated menus & bulk catering across Delhi NCR & Gurgaon.",
   keywords: "Catering, Catering Service, Catering Booking",
 };
 
