@@ -369,6 +369,60 @@ export const GalleryDataProps: DataTypeProps = {
         alt: "avatar",
       },
     },
+    {
+      image: {
+        src: "/IMG_6218.webp",
+        alt: "avatar",
+      },
+    },
+    {
+      image: {
+        src: "/IMG_6223.webp",
+        alt: "avatar",
+      },
+    },
+    {
+      image: {
+        src: "/new-img-1.webp",
+        alt: "avatar",
+      },
+    },
+    {
+      image: {
+        src: "/new-img-2.webp",
+        alt: "avatar",
+      },
+    },
+    {
+      image: {
+        src: "/new-img-3.webp",
+        alt: "avatar",
+      },
+    },
+    {
+      image: {
+        src: "/new-img-4.webp",
+        alt: "avatar",
+      },
+    },
+    {
+      image: {
+        src: "/new-img-5.webp",
+        alt: "avatar",
+      },
+    },
+    {
+      image: {
+        src: "/new-img-6.webp",
+        alt: "avatar",
+      },
+    },
+    {
+      image: {
+        src: "/new-img-7.webp",
+        alt: "avatar",
+      },
+    },
 
   ],
 };
