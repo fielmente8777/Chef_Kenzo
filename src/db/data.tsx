@@ -97,7 +97,8 @@ export const aboutDataProps: TwoColCardprops = {
     },
     {
       icon: <FillTick />,
-      description: "Proven track record with food delivery services receiving high ratings on various platforms.",
+      description:
+        "Proven track record with food delivery services receiving high ratings on various platforms.",
     },
   ],
 
@@ -323,16 +324,47 @@ export const TestimonialsDataProps: DataTypeProps = {
         <FillStar key={5} />,
       ],
     },
+    {
+      data: {
+        title: "Ruchi Suhag",
+        description: `If one is alive and have not tasted food from Chef Kenzo; he cannot be called fully alive. It's the best place in the world which only real blessings can make. Chef Kenzo, your food enlightens with every bite. May you thrive and may all people on earth taste your food and discover what enlightened food is like. May the supreme bless all of your team.`,
+      },
+      image: {
+        src: "/images/circle2.png",
+        alt: "avatar",
+      },
+      icon: [
+        <FillStar key={1} />,
+        <FillStar key={2} />,
+        <FillStar key={3} />,
+        <FillStar key={4} />,
+        <FillStar key={5} />,
+      ],
+    },
+    {
+      data: {
+        title: "Karthik Akkipeddi",
+        description: `It's 3 hours since I tasted the food and I am still recovering from the experience. I don't know what hit me, THIS IS "THE BEST FOOD" I HAVE HAD DELIVERED TO ME. The Chicken Rara Platter is what dreams are made of, the kulcha dipped in buttery goodness, the Chicken Rara perfectly spiced, finger-licking good. Whoever cooked this food, if you are reading this, from the bottom of my heart, THANK YOU.`,
+      },
+      image: {
+        src: "/images/circle2.png",
+        alt: "avatar",
+      },
+      icon: [
+        <FillStar key={1} />,
+        <FillStar key={2} />,
+        <FillStar key={3} />,
+        <FillStar key={4} />,
+        <FillStar key={5} />,
+      ],
+    },
   ],
 };
-
-
 
 export const GalleryDataProps: DataTypeProps = {
   title: "Gallery",
   description: `Our latest corporate and social <b>catering</b>`,
   items: [
-
     {
       image: {
         src: "/images/Copy of 202110_Chef_Kenzo_food-829.jpg",
@@ -423,6 +455,5 @@ export const GalleryDataProps: DataTypeProps = {
         alt: "avatar",
       },
     },
-
   ],
 };
