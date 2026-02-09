@@ -53,6 +53,7 @@ export default function RootLayout({
         />
 
 
+
         {/* Meta Pixel Code */}
         <script
           dangerouslySetInnerHTML={{
@@ -97,11 +98,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <NavBar />
         {children}
         <Footer />
-        <Whatsapp />
+        {/* <Whatsapp /> */}
         <Call />
 
 
-
+        {/* <!-- Eazbot Script (Next.js) --> */}
+        <Script id="chatbot-config" strategy="afterInteractive">
+          {`
+    window.eazbotConfig = {
+        ndid: "f8d6306a-18e7-476b-9012-8edaa9a7f6a8",
+        hid: "81518570",
+    };
+  ` }
+        </Script>
+        <Script
+          src="https://cb-script.dyq28lyxrazm2.amplifyapp.com/widget/lead-chatbot.js"
+          strategy="afterInteractive"
+        />
         {/* <!-- Google Tag Manager (noscript) --> */}
         <noscript>
           <iframe
@@ -111,6 +124,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
+
         {/* <!-- End Google Tag Manager (noscript) --> */}
       </body>
     </html>
