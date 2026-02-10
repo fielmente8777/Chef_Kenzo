@@ -1,18 +1,13 @@
 "use client";
 
-import {
-  FillCalendar,
-  FillMail,
-  FillMessage,
-  FillPhone,
-  FillUser,
-} from "@/icons/icons";
+import { useWebContext } from "@/contextapi/WebContext";
+import { FillMail, FillMessage, FillPhone, FillUser } from "@/icons/icons";
 import axios from "axios";
-import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import { countries } from "@/db/countryCode";
+import React, { useState } from "react";
 
 const Form = () => {
+  const { setIsOpen } = useWebContext();
   const router = useRouter();
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
@@ -79,6 +74,7 @@ const Form = () => {
         setUserPhone("");
         // setCountryCode("+91"); // Reset country code
         setFormRes(false);
+        setIsOpen(false);
         router.push("/thank-you/");
       } else {
         setFormRes(false);
@@ -185,19 +181,19 @@ const Form = () => {
             {data.tag === "div"
               ? data.content
               : React.createElement(data.tag, {
-                id: data.name,
-                type: data.type,
-                name: data.name,
-                value: data.value,
-                onChange: data.onChange,
-                placeholder: data.placeholder,
-                required: data.required,
-                autoComplete: "off",
-                spellCheck: "false",
-                rows: "5",
-                className:
-                  "w-full bg-transparent no-spinner resize-none placeholder:text-[#4C4C4C] focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
-              })}
+                  id: data.name,
+                  type: data.type,
+                  name: data.name,
+                  value: data.value,
+                  onChange: data.onChange,
+                  placeholder: data.placeholder,
+                  required: data.required,
+                  autoComplete: "off",
+                  spellCheck: "false",
+                  rows: "5",
+                  className:
+                    "w-full bg-transparent no-spinner resize-none placeholder:text-[#4C4C4C] focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
+                })}
           </div>
           {data.name === "phone" && errorMessage && (
             <p className="text-sm text-red-500 mt-2">{errorMessage}</p>
