@@ -5,15 +5,14 @@ import Image from "next/image";
 import { Autoplay, Pagination } from "swiper/modules";
 
 const Gallery: React.FC<DataTypeProps> = ({ title, items, description }) => {
-
-
-
   return (
     <Section>
       <div className="max-w-[1530px] mx-auto max-md:px-8">
         <div>
           <div className="flex flex-col gap-4">
-            <h2 className="text-xl md:text-3xl font-semibold text-red-primary text-center">{title}</h2>
+            <h2 className="text-xl md:text-3xl font-semibold text-red-primary text-center">
+              {title}
+            </h2>
             {/* <p
               className="text-center text-black-primary text-2xl lg:text-[2rem]/[2.5rem]"
               dangerouslySetInnerHTML={{ __html: description }}
@@ -51,13 +50,6 @@ const Gallery: React.FC<DataTypeProps> = ({ title, items, description }) => {
                   fill
                   className="object-cover"
                 />
-                <div className="">
-                  {item.image && (
-                    <h3 className="absolute bottom-2 left-2 text-white text-lg font-semibold">
-                      {item.image.src}
-                    </h3>
-                  )}
-                </div>
               </div>
             )}
           </SliderSwip>
