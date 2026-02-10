@@ -46,20 +46,18 @@ const Testimonials: React.FC<DataTypeProps> = ({
         >
           {(item) => (
             <div className="h-full flex flex-col justify-start">
-              <div className="relative border border-red-primary p-5 ">
-                {/* <div className="absolute lg:-top-[40%] -top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2">
+              <div className="border border-red-primary p-5 space-y-5">
                   <Image
                     src={item.image.src}
                     alt="alt"
-                    width={106}
-                    height={106}
-                    className="rounded-full border"
+                    width={100}
+                    height={100}
+                    className="mx-auto"
                   />
-                </div> */}
                 <div className="flex flex-col items-center justify-center gap-5">
-                  <h3 className="text-2xl text-black-primary">
+                  {/* <h3 className="text-2xl text-black-primary">
                     {item.data.title}
-                  </h3>
+                  </h3> */}
                   <div className="flex space-x-1">
                     {item.icon.map((star: any, index: number) => (
                       <span key={index}>{star}</span>

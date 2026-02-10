@@ -1,17 +1,15 @@
-import Image from "next/image";
-import Container from "./Container";
-import Logo from "../../public/images/logo.png";
-import { OutLineCopyRight } from "@/icons/icons";
-import Link from "next/link";
 import { contactData, PoliciesDataProps } from "@/db/data";
-import { FaInstagram } from "react-icons/fa6";
+import { OutLineCopyRight } from "@/icons/icons";
+import Image from "next/image";
+import Link from "next/link";
+import Logo from "../../public/images/logo.png";
+import Container from "./Container";
 
 import { FaFacebookSquare } from "react-icons/fa";
-import { RiInstagramFill } from "react-icons/ri";
 import { ImLinkedin } from "react-icons/im";
-import { SiZomato } from "react-icons/si";
-import { SiSwiggy } from "react-icons/si";
 import { IoLogoYoutube } from "react-icons/io";
+import { RiInstagramFill } from "react-icons/ri";
+import { SiSwiggy, SiZomato } from "react-icons/si";
 const Footer = () => {
   interface CertificateData {
     imageSrc: string;

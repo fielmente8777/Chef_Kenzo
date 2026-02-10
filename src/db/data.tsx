@@ -21,7 +21,7 @@ export const contactData: ContactUsProps[] = [
   {
     icon: <OutLineLocation />,
     label:
-      "D-121 Sushant Shopping Arcade, Sushant Lok 1, B Block, Gurugram, Haryana 122009",
+      "R2-105 First floor M3M cosmopolitan Sector 66 Gurgaon",
     // href: "https://goo.gl/maps/UJQXkHh8hNn",
     // traget: true,
   },
@@ -61,7 +61,7 @@ export const BannerData: BannerTypeProps = {
   },
   listItems: [
     {
-      number: "3+",
+      number: "5+",
       description: "Years of Experience",
     },
     {
@@ -156,12 +156,12 @@ export const TestimonialsDataProps: DataTypeProps = {
   items: [
     {
       data: {
-        title: "Ritika Sharma,",
-        description: `We recently hired Chef Kenzo for our lunch at the office, and the food was absolutely amazing! Every dish was packed with flavor, and the presentation was top-notch. Our team couldn’t stop talking about the fusion options. Chef Kenzo truly elevated the entire experience. Highly recommend for any corporate event!`,
+        title: "Employee, Deloitte",
+        description: `Outstanding Corporate Catering by Chef Kenzo Chef Kenzo catered a Deloitte corporate event for 250 guests, delivering a truly high-end experience. Each guest received an individually personalised meal box with an exquisite main, a crafted beverage, a perfectly paired dessert with ice cream, and thoughtful sides. The premium packaging, flawless organisation, and on-time delivery stood out, making distribution seamless even at scale. The quality, presentation, and attention to detail impressed everyone and elevated the entire event.Highly recommended for organisations seeking luxury, well-executed corporate catering.`,
       },
       image: {
-        src: "/images/circle.png",
-        alt: "avatar",
+        src: "/deloitte.png",
+        alt: "Deloitte",
       },
       icon: [
         <FillStar key={1} />,
@@ -173,12 +173,12 @@ export const TestimonialsDataProps: DataTypeProps = {
     },
     {
       data: {
-        title: "Apoorva Tiwari",
-        description: `Brownie really was brilliantly enrichedmust try.`,
+        title: "EY",
+        description: `We worked with Chef Kenzo for a multi-day internal meeting, and the experience was excellent. The food was refined, well-received by an international group, and consistently delivered at a high standard. The team was responsive, professional, and easy to work with, making the entire process smooth and stress-free. Overall, a great catering partner for curated corporate gatherings.`,
       },
       image: {
-        src: "/images/circle.png",
-        alt: "avatar",
+        src: "/ey.png",
+        alt: "ey",
       },
       icon: [
         <FillStar key={1} />,
@@ -190,12 +190,12 @@ export const TestimonialsDataProps: DataTypeProps = {
     },
     {
       data: {
-        title: "Sneha Jha",
-        description: `The Mexican Burrito bowl was delicious. They also gave a complimentary Blondie dessert which was a delight! Good job. Will order again.`,
+        title: "Team Zomato",
+        description: `We partnered with Chef Kenzo on New Year’s Eve, our busiest day of the year, catering around 1,400 meal boxes for our entire team. Despite the scale and time sensitivity, the experience was completely seamless. The team delivered on time, stayed well-organised, and most importantly maintained excellent quality across such a large volume. Everything was handled professionally, making it a stress-free experience on an otherwise hectic day. A reliable partner for high-volume, high-pressure catering.`,
       },
       image: {
-        src: "/images/circle1.png",
-        alt: "avatar",
+        src: "/zomato.png",
+        alt: "Team Zomato",
       },
       icon: [
         <FillStar key={1} />,
@@ -207,12 +207,12 @@ export const TestimonialsDataProps: DataTypeProps = {
     },
     {
       data: {
-        title: "Divvya Anand",
-        description: `Chicken Popcorn was very flavoursome and a good snackie option, loved the Blondie per usual, unique & tasty dessert!`,
+        title: "Team Amex",
+        description: `Effortless snack box catering for our product launch polished, prompt, and well received.”`,
       },
       image: {
-        src: "/images/circle2.png",
-        alt: "avatar",
+        src: "/amex.png",
+        alt: "Team Amex",
       },
       icon: [
         <FillStar key={1} />,
@@ -224,12 +224,12 @@ export const TestimonialsDataProps: DataTypeProps = {
     },
     {
       data: {
-        title: "Anil Mehta",
-        description: `Chef Kenzo provided catering for our corporate seminar, and it was a hit. The quality, taste, and variety were impressive, and everything arrived fresh and on time. The service was professional, and they really understood our needs. Will definitely be using them again for future events!`,
+        title: "Droom",
+        description: `Chef Kenzo delivered a full-stack catering experience for our company’s anniversary evening, featuring innovative flying snacks and a unique live main-course concept prepared fresh at the venue. The creativity, presentation, and refined flavours stood out and were thoroughly enjoyed by a distinguished gathering. A seamless, thoughtfully curated experience that truly elevated the celebration.`,
       },
       image: {
-        src: "/images/circle2.png",
-        alt: "avatar",
+        src: "/droom.png",
+        alt: "Droom",
       },
       icon: [
         <FillStar key={1} />,
@@ -241,114 +241,12 @@ export const TestimonialsDataProps: DataTypeProps = {
     },
     {
       data: {
-        title: "Karan",
-        description: `My go to place to order always`,
+        title: "GSK Nielsen",
+        description: `Chef Kenzo supported our executive committee meeting with a structured, three-course dinner that was smooth, timely, and professionally managed. The experience was well received by our international delegates and added a polished touch to the evening.Overall, a reliable and well-organised catering partner for senior leadership meetings.`,
       },
       image: {
-        src: "/images/circle2.png",
-        alt: "avatar",
-      },
-      icon: [
-        <FillStar key={1} />,
-        <FillStar key={2} />,
-        <FillStar key={3} />,
-        <FillStar key={4} />,
-        <FillStar key={5} />,
-      ],
-    },
-    {
-      data: {
-        title: "AJ",
-        description: `Amazing as always. One of a very few restaurants in Gurgaon that compliments their customers. 10/10`,
-      },
-      image: {
-        src: "/images/circle2.png",
-        alt: "avatar",
-      },
-      icon: [
-        <FillStar key={1} />,
-        <FillStar key={2} />,
-        <FillStar key={3} />,
-        <FillStar key={4} />,
-        <FillStar key={5} />,
-      ],
-    },
-    {
-      data: {
-        title: "Priyam",
-        description: `this place has incredible food shahi tukda and the blondie are insanely good great middle east platter incredible food and plentiful quantities`,
-      },
-      image: {
-        src: "/images/circle2.png",
-        alt: "avatar",
-      },
-      icon: [
-        <FillStar key={1} />,
-        <FillStar key={2} />,
-        <FillStar key={3} />,
-        <FillStar key={4} />,
-        <FillStar key={5} />,
-      ],
-    },
-    {
-      data: {
-        title: "Nisha Verma",
-        description: `We entrusted Chef Kenzo with a large-scale event, and they exceeded expectations. From the perfectly curated menu to the prompt delivery, everything was seamless. The team was professional, and the food was well-received by all. Chef Kenzo truly knows how to cater to corporate clients.`,
-      },
-      image: {
-        src: "/images/circle2.png",
-        alt: "avatar",
-      },
-      icon: [
-        <FillStar key={1} />,
-        <FillStar key={2} />,
-        <FillStar key={3} />,
-        <FillStar key={4} />,
-        <FillStar key={5} />,
-      ],
-    },
-    {
-      data: {
-        title: "Ankita Sachdeva",
-        description: `The best Lebanese platter I have had since a very long time .. loved it`,
-      },
-      image: {
-        src: "/images/circle2.png",
-        alt: "avatar",
-      },
-      icon: [
-        <FillStar key={1} />,
-        <FillStar key={2} />,
-        <FillStar key={3} />,
-        <FillStar key={4} />,
-        <FillStar key={5} />,
-      ],
-    },
-    {
-      data: {
-        title: "Ruchi Suhag",
-        description: `If one is alive and have not tasted food from Chef Kenzo; he cannot be called fully alive. It's the best place in the world which only real blessings can make. Chef Kenzo, your food enlightens with every bite. May you thrive and may all people on earth taste your food and discover what enlightened food is like. May the supreme bless all of your team.`,
-      },
-      image: {
-        src: "/images/circle2.png",
-        alt: "avatar",
-      },
-      icon: [
-        <FillStar key={1} />,
-        <FillStar key={2} />,
-        <FillStar key={3} />,
-        <FillStar key={4} />,
-        <FillStar key={5} />,
-      ],
-    },
-    {
-      data: {
-        title: "Karthik Akkipeddi",
-        description: `It's 3 hours since I tasted the food and I am still recovering from the experience. I don't know what hit me, THIS IS "THE BEST FOOD" I HAVE HAD DELIVERED TO ME. The Chicken Rara Platter is what dreams are made of, the kulcha dipped in buttery goodness, the Chicken Rara perfectly spiced, finger-licking good. Whoever cooked this food, if you are reading this, from the bottom of my heart, THANK YOU.`,
-      },
-      image: {
-        src: "/images/circle2.png",
-        alt: "avatar",
+        src: "/gsk.png",
+        alt: "GSK Nielsen",
       },
       icon: [
         <FillStar key={1} />,
@@ -377,12 +275,12 @@ export const GalleryDataProps: DataTypeProps = {
         alt: "avatar",
       },
     },
-    {
-      image: {
-        src: "/images/Copy of 202110_Chef_Kenzo_food-456.jpg",
-        alt: "avatar",
-      },
-    },
+    // {
+    //   image: {
+    //     src: "/images/Copy of 202110_Chef_Kenzo_food-456.jpg",
+    //     alt: "avatar",
+    //   },
+    // },
     {
       image: {
         src: "/images/Copy of 202203_Chef_Kenzo_food-091.jpg",
@@ -413,30 +311,30 @@ export const GalleryDataProps: DataTypeProps = {
         alt: "avatar",
       },
     },
-    {
-      image: {
-        src: "/new-img-1.webp",
-        alt: "avatar",
-      },
-    },
+    // {
+    //   image: {
+    //     src: "/new-img-1.webp",
+    //     alt: "avatar",
+    //   },
+    // },
     {
       image: {
         src: "/new-img-2.webp",
         alt: "avatar",
       },
     },
-    {
-      image: {
-        src: "/new-img-3.webp",
-        alt: "avatar",
-      },
-    },
-    {
-      image: {
-        src: "/new-img-4.webp",
-        alt: "avatar",
-      },
-    },
+    // {
+    //   image: {
+    //     src: "/new-img-3.webp",
+    //     alt: "avatar",
+    //   },
+    // },
+    // {
+    //   image: {
+    //     src: "/new-img-4.webp",
+    //     alt: "avatar",
+    //   },
+    // },
     {
       image: {
         src: "/new-img-5.webp",
@@ -449,11 +347,218 @@ export const GalleryDataProps: DataTypeProps = {
         alt: "avatar",
       },
     },
-    {
-      image: {
-        src: "/new-img-7.webp",
-        alt: "avatar",
-      },
-    },
+    // {
+    //   image: {
+    //     src: "/new-img-7.webp",
+    //     alt: "avatar",
+    //   },
+    // },
   ],
 };
+
+// oldtestimonials=[
+//   {
+//       data: {
+//         title: "Ritika Sharma,",
+//         description: `We recently hired Chef Kenzo for our lunch at the office, and the food was absolutely amazing! Every dish was packed with flavor, and the presentation was top-notch. Our team couldn’t stop talking about the fusion options. Chef Kenzo truly elevated the entire experience. Highly recommend for any corporate event!`,
+//       },
+//       image: {
+//         src: "/images/circle.png",
+//         alt: "avatar",
+//       },
+//       icon: [
+//         <FillStar key={1} />,
+//         <FillStar key={2} />,
+//         <FillStar key={3} />,
+//         <FillStar key={4} />,
+//         <FillStar key={5} />,
+//       ],
+//     },
+//     {
+//       data: {
+//         title: "Apoorva Tiwari",
+//         description: `Brownie really was brilliantly enrichedmust try.`,
+//       },
+//       image: {
+//         src: "/images/circle.png",
+//         alt: "avatar",
+//       },
+//       icon: [
+//         <FillStar key={1} />,
+//         <FillStar key={2} />,
+//         <FillStar key={3} />,
+//         <FillStar key={4} />,
+//         <FillStar key={5} />,
+//       ],
+//     },
+//     {
+//       data: {
+//         title: "Sneha Jha",
+//         description: `The Mexican Burrito bowl was delicious. They also gave a complimentary Blondie dessert which was a delight! Good job. Will order again.`,
+//       },
+//       image: {
+//         src: "/images/circle1.png",
+//         alt: "avatar",
+//       },
+//       icon: [
+//         <FillStar key={1} />,
+//         <FillStar key={2} />,
+//         <FillStar key={3} />,
+//         <FillStar key={4} />,
+//         <FillStar key={5} />,
+//       ],
+//     },
+//     {
+//       data: {
+//         title: "Divvya Anand",
+//         description: `Chicken Popcorn was very flavoursome and a good snackie option, loved the Blondie per usual, unique & tasty dessert!`,
+//       },
+//       image: {
+//         src: "/images/circle2.png",
+//         alt: "avatar",
+//       },
+//       icon: [
+//         <FillStar key={1} />,
+//         <FillStar key={2} />,
+//         <FillStar key={3} />,
+//         <FillStar key={4} />,
+//         <FillStar key={5} />,
+//       ],
+//     },
+//     {
+//       data: {
+//         title: "Anil Mehta",
+//         description: `Chef Kenzo provided catering for our corporate seminar, and it was a hit. The quality, taste, and variety were impressive, and everything arrived fresh and on time. The service was professional, and they really understood our needs. Will definitely be using them again for future events!`,
+//       },
+//       image: {
+//         src: "/images/circle2.png",
+//         alt: "avatar",
+//       },
+//       icon: [
+//         <FillStar key={1} />,
+//         <FillStar key={2} />,
+//         <FillStar key={3} />,
+//         <FillStar key={4} />,
+//         <FillStar key={5} />,
+//       ],
+//     },
+//     {
+//       data: {
+//         title: "Karan",
+//         description: `My go to place to order always`,
+//       },
+//       image: {
+//         src: "/images/circle2.png",
+//         alt: "avatar",
+//       },
+//       icon: [
+//         <FillStar key={1} />,
+//         <FillStar key={2} />,
+//         <FillStar key={3} />,
+//         <FillStar key={4} />,
+//         <FillStar key={5} />,
+//       ],
+//     },
+//     {
+//       data: {
+//         title: "AJ",
+//         description: `Amazing as always. One of a very few restaurants in Gurgaon that compliments their customers. 10/10`,
+//       },
+//       image: {
+//         src: "/images/circle2.png",
+//         alt: "avatar",
+//       },
+//       icon: [
+//         <FillStar key={1} />,
+//         <FillStar key={2} />,
+//         <FillStar key={3} />,
+//         <FillStar key={4} />,
+//         <FillStar key={5} />,
+//       ],
+//     },
+//     {
+//       data: {
+//         title: "Priyam",
+//         description: `this place has incredible food shahi tukda and the blondie are insanely good great middle east platter incredible food and plentiful quantities`,
+//       },
+//       image: {
+//         src: "/images/circle2.png",
+//         alt: "avatar",
+//       },
+//       icon: [
+//         <FillStar key={1} />,
+//         <FillStar key={2} />,
+//         <FillStar key={3} />,
+//         <FillStar key={4} />,
+//         <FillStar key={5} />,
+//       ],
+//     },
+//     {
+//       data: {
+//         title: "Nisha Verma",
+//         description: `We entrusted Chef Kenzo with a large-scale event, and they exceeded expectations. From the perfectly curated menu to the prompt delivery, everything was seamless. The team was professional, and the food was well-received by all. Chef Kenzo truly knows how to cater to corporate clients.`,
+//       },
+//       image: {
+//         src: "/images/circle2.png",
+//         alt: "avatar",
+//       },
+//       icon: [
+//         <FillStar key={1} />,
+//         <FillStar key={2} />,
+//         <FillStar key={3} />,
+//         <FillStar key={4} />,
+//         <FillStar key={5} />,
+//       ],
+//     },
+//     {
+//       data: {
+//         title: "Ankita Sachdeva",
+//         description: `The best Lebanese platter I have had since a very long time .. loved it`,
+//       },
+//       image: {
+//         src: "/images/circle2.png",
+//         alt: "avatar",
+//       },
+//       icon: [
+//         <FillStar key={1} />,
+//         <FillStar key={2} />,
+//         <FillStar key={3} />,
+//         <FillStar key={4} />,
+//         <FillStar key={5} />,
+//       ],
+//     },
+//     {
+//       data: {
+//         title: "Ruchi Suhag",
+//         description: `If one is alive and have not tasted food from Chef Kenzo; he cannot be called fully alive. It's the best place in the world which only real blessings can make. Chef Kenzo, your food enlightens with every bite. May you thrive and may all people on earth taste your food and discover what enlightened food is like. May the supreme bless all of your team.`,
+//       },
+//       image: {
+//         src: "/images/circle2.png",
+//         alt: "avatar",
+//       },
+//       icon: [
+//         <FillStar key={1} />,
+//         <FillStar key={2} />,
+//         <FillStar key={3} />,
+//         <FillStar key={4} />,
+//         <FillStar key={5} />,
+//       ],
+//     },
+//     {
+//       data: {
+//         title: "Karthik Akkipeddi",
+//         description: `It's 3 hours since I tasted the food and I am still recovering from the experience. I don't know what hit me, THIS IS "THE BEST FOOD" I HAVE HAD DELIVERED TO ME. The Chicken Rara Platter is what dreams are made of, the kulcha dipped in buttery goodness, the Chicken Rara perfectly spiced, finger-licking good. Whoever cooked this food, if you are reading this, from the bottom of my heart, THANK YOU.`,
+//       },
+//       image: {
+//         src: "/images/circle2.png",
+//         alt: "avatar",
+//       },
+//       icon: [
+//         <FillStar key={1} />,
+//         <FillStar key={2} />,
+//         <FillStar key={3} />,
+//         <FillStar key={4} />,
+//         <FillStar key={5} />,
+//       ],
+//     },
+// ]
