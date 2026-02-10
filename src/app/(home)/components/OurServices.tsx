@@ -1,9 +1,7 @@
 "use client"
 import { Card, Container, Section } from "@/components";
-import PopupForm from "@/components/PopupForm";
+import { useWebContext } from "@/contextapi/WebContext";
 import { DataTypeProps } from "@/types/type";
-import Link from "next/link";
-import { useState } from "react";
 
 const OurServices: React.FC<DataTypeProps> = ({
   title,
@@ -12,10 +10,9 @@ const OurServices: React.FC<DataTypeProps> = ({
   link,
 }) => {
 
-  const [showModal, setShowModal] = useState(false);
-
+  const {setIsOpen} = useWebContext();
   const handleShowModal = () => {
-    setShowModal(true);
+    setIsOpen(true);
   }
   return (
 
@@ -43,7 +40,6 @@ const OurServices: React.FC<DataTypeProps> = ({
           </div>
         )}
 
-        {showModal && <PopupForm showModal={showModal} setShowModal={setShowModal} />}
       </Container>
     </Section>
   );

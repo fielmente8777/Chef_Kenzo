@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Container from "./Container";
 import Section from "./Section";
@@ -6,6 +6,7 @@ import Link from "next/link";
 import { TwoColCardprops } from "@/types/type";
 import { useState } from "react";
 import PopupForm from "./PopupForm";
+import { useWebContext } from "@/contextapi/WebContext";
 
 const TwoColGridCard: React.FC<TwoColCardprops> = ({
   title,
@@ -18,21 +19,19 @@ const TwoColGridCard: React.FC<TwoColCardprops> = ({
   href1,
   listItems,
 }) => {
-
-  const [showModal, setShowModal] = useState(false);
-
+  const { setIsOpen } = useWebContext();
   const handleShowModal = () => {
-    setShowModal(true);
-  }
+    setIsOpen(true);
+  };
 
   const handleDownloadPDF = () => {
     // The path to the PDF file stored in the public folder
-    const fileUrl = 'images/CompanyProfile.pdf';
+    const fileUrl = "images/CompanyProfile.pdf";
 
     // Create an anchor element and trigger the download
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.href = fileUrl;
-    link.setAttribute('download', 'Company_Profile.pdf'); // Optional: Specify the filename
+    link.setAttribute("download", "Company_Profile.pdf"); // Optional: Specify the filename
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link); // Clean up the element after download
@@ -91,9 +90,6 @@ const TwoColGridCard: React.FC<TwoColCardprops> = ({
           </button>
         </div>
       </div>
-
-
-      {showModal && <PopupForm showModal={showModal} setShowModal={setShowModal} />}
     </div>
   );
 };

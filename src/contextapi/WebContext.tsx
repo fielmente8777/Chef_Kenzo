@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 type IWebContext = {
   isOpen: boolean;
@@ -16,8 +16,10 @@ type Props = {
 };
 
 export const WebProvider = ({ children }: Props) => {
+  const [isOpen, setIsOpen] = useState(false);   // ✅ ADD THIS
+
   return (
-    <WebContext.Provider value={{ isOpen: false, setIsOpen: () => {} }}>
+    <WebContext.Provider value={{ isOpen, setIsOpen }}>
       {children}
     </WebContext.Provider>
   );
