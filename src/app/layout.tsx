@@ -101,7 +101,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <NavBar />
           {children}
           <Footer />
-          {/* <Whatsapp /> */}
+          <Whatsapp />
           <Call />
           <PopupForm />
         </WebProvider>
