@@ -1,7 +1,6 @@
-"use client"
 import { Card, Container, Section } from "@/components";
-import { useWebContext } from "@/contextapi/WebContext";
 import { DataTypeProps } from "@/types/type";
+import Link from "next/link";
 
 const OurServices: React.FC<DataTypeProps> = ({
   title,
@@ -10,10 +9,8 @@ const OurServices: React.FC<DataTypeProps> = ({
   link,
 }) => {
 
-  const {setIsOpen} = useWebContext();
-  const handleShowModal = () => {
-    setIsOpen(true);
-  }
+  // const {setIsOpen} = useWebContext();
+  
   return (
 
     <Section>
@@ -31,12 +28,14 @@ const OurServices: React.FC<DataTypeProps> = ({
         </div>
         {link && (
           <div className="flex justify-center mt-8">
-            <button
-              onClick={handleShowModal}
+            <Link
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex gap-2 px-6 capitalize bg-red-primary hover:bg-white hover:text-red-primary hover:scale-x-110 duration-700 transition rounded-md py-3 font-medium border border-solid border-red-primary bg-primary text-black-primary"
             >
               {link.linkText}
-            </button>
+            </Link>
           </div>
         )}
 

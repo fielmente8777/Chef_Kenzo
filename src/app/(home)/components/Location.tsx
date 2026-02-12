@@ -1,4 +1,5 @@
-import { Card, Container, LazyLoadedMap, Section } from "@/components";
+import { Container, LazyLoadedMap, Section } from "@/components";
+import { whatsappLink } from "@/db/data";
 import Link from "next/link";
 
 const Location: React.FC<{ title: string; src: string }> = ({ title, src }) => {
@@ -15,7 +16,9 @@ const Location: React.FC<{ title: string; src: string }> = ({ title, src }) => {
         </div>
         <div className="flex justify-center mt-8">
           <Link
-            href="#contact"
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex gap-2 px-6 capitalize bg-red-primary hover:bg-white hover:text-red-primary hover:scale-x-110 duration-700 transition rounded-md py-3 font-medium border border-solid border-red-primary bg-primary text-black-primary"
           >
             Get in Touch

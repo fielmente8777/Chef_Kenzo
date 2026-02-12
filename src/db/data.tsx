@@ -17,6 +17,13 @@ import {
   TwoColCardprops,
 } from "@/types/type";
 
+const encodedText = `Hi Chef Kenzo Team!
+I’d like to enquire about catering services for an upcoming event.
+Please help me with menu options and pricing.
+Thank you!`;
+
+export const whatsappLink = `https://wa.me/+919266866646?text=${encodedText}`;
+
 export const contactData: ContactUsProps[] = [
   {
     icon: <OutLineLocation />,
@@ -111,16 +118,16 @@ export const aboutDataProps: TwoColCardprops = {
     alt: "avatar",
   },
   linkText: "Get A Quote!",
-  href: "#",
+  href: whatsappLink,
   linkText1: "Download Company Profile",
-  href1: "#",
+  href1: "/images/CompanyProfile.pdf",
 };
 
 export const OurServicesDataProps: DataTypeProps = {
   title: "Our Services",
   description: `Premium Catering Tailored to Your <b>Taste</b>`,
   link: {
-    href: "#",
+    href: whatsappLink,
     linkText: "Get Quote Now!",
   },
   items: [

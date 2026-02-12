@@ -1,8 +1,9 @@
 "use client";
 import { Container, Section } from "@/components";
 import SwiperCarousel from "@/components/SwiperCarousel";
-import { useWebContext } from "@/contextapi/WebContext";
+import { whatsappLink } from "@/db/data";
 import Image from "next/image";
+import Link from "next/link";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 
 const OurTrustedClients: React.FC<{ title: string; images: string[] }> = ({
@@ -10,7 +11,7 @@ const OurTrustedClients: React.FC<{ title: string; images: string[] }> = ({
   images,
 }) => {
   images = [...images, ...images];
-  const { setIsOpen } = useWebContext();
+  // const { setIsOpen } = useWebContext();
   return (
     <Section>
       <Container className="space-y-10 md:space-y-16">
@@ -63,12 +64,15 @@ const OurTrustedClients: React.FC<{ title: string; images: string[] }> = ({
           />
           <div className="bg-[linear-gradient(to_right,_#FFFFFF,_#F2B9CA,_#FFFFFF)] w-full h-px"></div>
         </div>
-        <button
-          onClick={() => setIsOpen(true)}
-          className="flex gap-2 mx-auto px-6 capitalize bg-red-primary hover:bg-white hover:text-red-primary hover:scale-x-110 duration-700 transition rounded-md py-3 font-medium border border-solid border-red-primary bg-primary text-black-primary"
+        <Link
+          href={whatsappLink}
+          // onClick={() => setIsOpen(true)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex gap-2 w-fit mx-auto px-6 capitalize bg-red-primary hover:bg-white hover:text-red-primary hover:scale-x-110 duration-700 transition rounded-md py-3 font-medium border border-solid border-red-primary bg-primary text-black-primary"
         >
           Get A Quote!
-        </button>
+        </Link>
       </Container>
     </Section>
   );
