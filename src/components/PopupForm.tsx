@@ -27,7 +27,7 @@ const PopupForm = () => {
   return (
     <>
       <section
-        className={`fixed z-50 w-full bg-white/70 backdrop-blur-sm inset-0 transform transition-all duration-300 ease-in-out ${isOpen ? "opacity-100 visible scale-100" : "opacity-0 invisible scale-75"}`}
+        className={`fixed z-50 w-full  backdrop-blur-sm inset-0 transform transition-all duration-300 ease-in-out ${isOpen ? "opacity-100 visible scale-100" : "opacity-0 invisible scale-75"}`}
       >
         <article className="flex justify-center items-center h-full py-20 max-md:px-4">
           <div className="w-full max-w-4xl max-md:mt-20 shadow-xl p-4 relative rounded-md border-2 border-pink-400 bg-white">

@@ -34,7 +34,8 @@ const Footer = () => {
       imageSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/cd88fea7a5b45050493a0611fe5f1c7365a3b54158fc9531a1759debe70cada2?placeholderIfAbsent=true&apiKey=00653ad687dd4653a4d305d93aceaa71",
       title: "LIC Number:",
-      value: "10821005001196",
+      value: "10825005000808",
+      // value: "10821005001196",
     },
   ];
   return (

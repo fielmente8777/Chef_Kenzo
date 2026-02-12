@@ -18,6 +18,34 @@
   }
 }
 
+.demo {
+    .swiper {
+      pointer-events: none;
+    }
+    .swiper-wrapper {
+      transition-timing-function: linear !important;
+    }
+  }
+
+  .line{
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background:url("/line.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+
 @font-face {
   font-family: "HvDTrial Brandon Grotesque";
   src:

@@ -23,9 +23,7 @@ const Enquiry = () => {
         </div>
         <div className="flex flex-col gap-8 w-full order-1 md:order-2 ">
           <div className="flex flex-col gap-5">
-            {/* <h2 className="text-2xl lg:text-[2rem]/[2.5rem] font-normal text-red-primary">
-              Get in Touch
-            </h2> */}
+           
             <h3 className="text-2xl  lg:text-[2rem]/[2.5rem] font-normal text-gray-primary">
               Ready to book the catering for your{" "}special event?
             </h3>

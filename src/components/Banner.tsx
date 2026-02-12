@@ -62,6 +62,7 @@ const Banner: React.FC<BannerTypeProps> = ({
                 )}
               </SliderSwip>
             </div>
+            <h3 className="text-[1.75rem] font-semibold mt-6 line">“Women Led Business”</h3>
           </div>
           <div className="w-full flex justify-center col-span-3 lg:justify-end">
             <Image

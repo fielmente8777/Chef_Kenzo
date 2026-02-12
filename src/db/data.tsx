@@ -20,8 +20,7 @@ import {
 export const contactData: ContactUsProps[] = [
   {
     icon: <OutLineLocation />,
-    label:
-      "R2-105 First floor M3M cosmopolitan Sector 66 Gurgaon",
+    label: "R2-105 First floor M3M cosmopolitan Sector 66 Gurgaon",
     // href: "https://goo.gl/maps/UJQXkHh8hNn",
     // traget: true,
   },
@@ -99,6 +98,11 @@ export const aboutDataProps: TwoColCardprops = {
       icon: <FillTick />,
       description:
         "Proven track record with food delivery services receiving high ratings on various platforms.",
+    },
+    {
+      icon: <FillTick />,
+      description:
+        "Refined flavours for the new generation.",
     },
   ],
 
@@ -256,6 +260,18 @@ export const TestimonialsDataProps: DataTypeProps = {
         <FillStar key={5} />,
       ],
     },
+  ],
+};
+
+export const OurTrustedClientsDataProps = {
+  title: "Our Trusted <b>Clients!</b>",
+  images: [
+    "/deloitte.png",
+    "/ey.png",
+    "/zomato.png",
+    "/amex.png",
+    "/droom.png",
+    "/gsk.png",
   ],
 };
 

@@ -47,13 +47,13 @@ const Testimonials: React.FC<DataTypeProps> = ({
           {(item) => (
             <div className="h-full flex flex-col justify-start">
               <div className="border border-red-primary p-5 space-y-5">
-                  <Image
+                  {/* <Image
                     src={item.image.src}
                     alt="alt"
                     width={100}
                     height={100}
                     className="mx-auto"
-                  />
+                  /> */}
                 <div className="flex flex-col items-center justify-center gap-5">
                   {/* <h3 className="text-2xl text-black-primary">
                     {item.data.title}
