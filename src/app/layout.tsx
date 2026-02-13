@@ -88,10 +88,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PT5DTZ4X');
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-PT5DTZ4X');
             `,
           }}
         />
@@ -109,11 +109,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* <!-- Eazbot Script (Next.js) --> */}
         <Script id="chatbot-config" strategy="afterInteractive">
           {`
-    window.eazbotConfig = {
-        ndid: "f8d6306a-18e7-476b-9012-8edaa9a7f6a8",
-        hid: "81518570",
-    };
-  `}
+            window.eazbotConfig = {
+                ndid: "f8d6306a-18e7-476b-9012-8edaa9a7f6a8",
+                hid: "81518570",
+            };
+          `}
         </Script>
         <Script
           src="https://cb-script.dyq28lyxrazm2.amplifyapp.com/widget/lead-chatbot.js"
