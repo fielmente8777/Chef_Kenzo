@@ -22,7 +22,7 @@ I’d like to enquire about catering services for an upcoming event.
 Please help me with menu options and pricing.
 Thank you!`;
 
-export const whatsappLink = `https://wa.me/+919266866646?text=${encodedText}`;
+export const whatsappLink = `https://wa.me/+918595299043?text=${encodedText}`;
 
 export const contactData: ContactUsProps[] = [
   {
@@ -33,8 +33,8 @@ export const contactData: ContactUsProps[] = [
   },
   {
     icon: <OutLineCallWhite />,
-    label: " +91 9266866646",
-    href: "tel:+91 9266866646",
+    label: " +91 8595299043",
+    href: "tel:+91 8595299043",
   },
   {
     icon: <OutLineMailWhite />,
