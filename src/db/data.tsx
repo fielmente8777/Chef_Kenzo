@@ -117,7 +117,7 @@ export const aboutDataProps: TwoColCardprops = {
     src: "/images/newAbout.webp",
     alt: "avatar",
   },
-  linkText: "Get A Quote!",
+  linkText: "Get A Quote",
   href: whatsappLink,
   linkText1: "Download Company Profile",
   href1: "/images/CompanyProfile.pdf",
@@ -128,7 +128,7 @@ export const OurServicesDataProps: DataTypeProps = {
   description: `Premium Catering Tailored to Your <b>Taste</b>`,
   link: {
     href: whatsappLink,
-    linkText: "Get Quote Now!",
+    linkText: "Get A Quote",
   },
   items: [
     {

@@ -5,16 +5,12 @@ import Logo from "../../public/images/logo.png";
 import Link from "next/link";
 
 import { usePathname, useRouter } from "next/navigation";
+import { useWebContext } from "@/contextapi/WebContext";
 const NavBar = () => {
-  const router = useRouter();
-  const pathname = usePathname();
+  const { setIsOpen } = useWebContext();
 
   const handleGetInTouch = () => {
-    if (pathname !== "/") {
-      router.push("/#contact");
-    } else {
-      router.push("#contact");
-    }
+    setIsOpen(true);
   };
   return (
     <header className="py-5">
@@ -53,7 +49,8 @@ const NavBar = () => {
               onClick={handleGetInTouch}
               className="lg:px-7 lg:py-4 px-3 py-2 border rounded-md text-black-primary lg:text-base text-sm capitalize border-red-primary bg-red-primary hover:bg-white hover:text-red-primary hover:scale-x-110 duration-700 transition"
             >
-              Get in Touch
+              {/* Get in Touch */}
+              Get A Quote
             </button>
           </div>
         </div>

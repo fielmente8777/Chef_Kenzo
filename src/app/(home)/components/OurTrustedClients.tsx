@@ -71,7 +71,7 @@ const OurTrustedClients: React.FC<{ title: string; images: string[] }> = ({
           rel="noopener noreferrer"
           className="flex gap-2 w-fit mx-auto px-6 capitalize bg-red-primary hover:bg-white hover:text-red-primary hover:scale-x-110 duration-700 transition rounded-md py-3 font-medium border border-solid border-red-primary bg-primary text-black-primary"
         >
-          Get A Quote!
+          Get A Quote
         </Link>
       </Container>
     </Section>
