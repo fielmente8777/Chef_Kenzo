@@ -51,15 +51,16 @@ const Form = () => {
 
     try {
       const { data } = await axios.post(
-        "https://www.privyr.com/api/v1/incoming-leads/0vZfjMQw/MMWj2R8X#generic-webhook",
+        // "https://www.privyr.com/api/v1/incoming-leads/0vZfjMQw/MMWj2R8X#generic-webhook",
+        `https://nexon.eazotel.com/eazotel/addcontacts`,
         {
-          // Domain: 'abhijeet',
-          Domain: "chefkenzo", // Replace with your actual domain value
+          Domain: "chefkenzo", // Replace with your actual domain value chefkenzo
           email: userEmail,
-          name: userName,
-          phone: userPhone, // Combine country code and phone number
-          message: userMessage,
-          created_from: "landing-page",
+          Name: userName,
+          Contact: userPhone, // Combine country code and phone number
+          Description: userMessage,
+          created_from: "webform",
+          source_url: window.location.href,
         },
         {
           headers: {
@@ -67,7 +68,7 @@ const Form = () => {
           },
         }
       );
-      if (data.success) {
+      if (data.Status) {
         setFormRes(true);
         setUserName("");
         setUserEmail("");
