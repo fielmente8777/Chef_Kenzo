@@ -84,3 +84,24 @@ export interface ContactUsProps {
     traget?: boolean;
 }
 
+
+export interface TestimonialsProps {
+  title: string;
+  testimonial: {
+    data: {
+      title: string;
+      description: string;
+    };
+    image: {
+      src: string;
+      alt: string;
+    };
+    icon: JSX.Element[];
+  }[];
+  image: string;
+  action: {
+    label: string;
+    href: string;
+  };
+  note: string;
+}

@@ -6,7 +6,7 @@ interface Props {
 
 const Section: React.FC<Props> = ({ className, children, id }) => {
   return (
-    <section className={`${className ? className : "lg:py-10"} py-5`} id={id}>
+    <section className={`${className ? className : "lg:py-16"} py-10 max_screen_width`} id={id}>
       {children}
     </section>
   );

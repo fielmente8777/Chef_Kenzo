@@ -19,32 +19,31 @@
 }
 
 .demo {
-    .swiper {
-      pointer-events: none;
-    }
-    .swiper-wrapper {
-      transition-timing-function: linear !important;
-    }
+  .swiper {
+    pointer-events: none;
   }
-
-  .line{
-    position: relative;
-    overflow: hidden;
-    width: fit-content;
-    &::after{
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background:url("/line.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+  .swiper-wrapper {
+    transition-timing-function: linear !important;
   }
+}
 
+.line {
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: url("/line.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
 
 @font-face {
   font-family: "HvDTrial Brandon Grotesque";
@@ -92,18 +91,32 @@ b {
   border-radius: 1rem;
 }
 .max-Width {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  max-width: 100%;
   width: 100%;
-
-  @media screen and (max-width: 768px) {
-    padding: 0 1.5rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (min-width: 768px) {
+    max-width: 720px;
+    padding-inline: 1rem;
   }
-
-  @media screen and (max-width: 480px) {
-    padding: 0 1rem;
+  @media (min-width: 992px) {
+    max-width: 960px;
+    padding-inline: 1rem;
   }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+    padding-inline: 0;
+  }
+}
+
+.max_screen_width {
+  max-width: 1600px;
+  width: 100%;
+  margin-inline: auto;
 }
 
 .pagination,
@@ -160,5 +173,83 @@ b {
   @media screen and (max-width: 768px) {
     background-position-x: 50%;
     background-position-y: 50%;
+  }
+}
+
+// hide scrollbar
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.marquee-wrapper {
+  display: flex;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center; /* vertical center */
+  gap: 32px; /* spacing like image */
+  margin-right: 32px;
+  white-space: nowrap;
+}
+
+.separator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+  background: none;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.text-bg{
+  span{
+    background-color: #f2b9ca;
+    padding: 0 5px;
+    color:  #fff;
+    font-weight: 700;
+  }
+}
+
+.text-line{
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    height: 70%;
+    background-color: #F2B9CA80;
+    top: 50%;
+    inset-inline: -6px;
+    z-index: -1;
+  }
+}
+
+.bg-background{
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #D4EEF94D;
+    z-index: -2;
   }
 }

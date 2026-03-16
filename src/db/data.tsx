@@ -161,7 +161,7 @@ export const OurServicesDataProps: DataTypeProps = {
   ],
 };
 
-export const TestimonialsDataProps: DataTypeProps = {
+export const TestimonialsDataProps = {
   title: "Testimonials",
   description: `Here's what our <b>customers</b> have to say!`,
   items: [

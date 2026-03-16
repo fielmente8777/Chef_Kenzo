@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import "./globals.scss";
 import { Call, Footer, NavBar, Whatsapp } from "@/components";
-import Script from "next/script";
-import { WebProvider } from "@/contextapi/WebContext";
 import PopupForm from "@/components/PopupForm";
+import { WebProvider } from "@/contextapi/WebContext";
+import type { Metadata } from "next";
+import Script from "next/script";
+import "./globals.scss";
 
 export const metadata: Metadata = {
   title: "Chef Kenzo Cloud Kitchen | Premium Catering in Delhi NCR & Gurgaon",
