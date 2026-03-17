@@ -221,35 +221,83 @@ input:focus {
   }
 }
 
-.text-bg{
-  span{
+.text-bg {
+  span {
     background-color: #f2b9ca;
     padding: 0 5px;
-    color:  #fff;
+    color: #fff;
     font-weight: 700;
   }
 }
 
-.text-line{
+.text-line {
   position: relative;
-  &::before{
-    content: '';
+  &::before {
+    content: "";
     position: absolute;
     height: 70%;
-    background-color: #F2B9CA80;
+    background-color: #f2b9ca80;
     top: 50%;
     inset-inline: -6px;
     z-index: -1;
   }
 }
 
-.bg-background{
+.bg-background {
   position: relative;
-  &::before{
-    content: '';
+  &::before {
+    content: "";
     position: absolute;
     inset: 0;
-    background-color: #D4EEF94D;
+    background-color: #d4eef94d;
     z-index: -2;
+  }
+}
+
+.section-bg {
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    
+    
+    inset-inline: 0;
+  }
+  &::before {
+    background: url("/landing-page/mask-group.png");
+    // border: #1c1c1cbf solid 1px;
+    background-size: cover;
+    top: -30%;
+    height: 150%;
+    z-index: -2;
+  }
+  &::after {
+    background: url("/landing-page/Ellipse-2.png");
+    // border: #1c1c1cbf solid 1px;
+    height: 160%;
+    top: -20%;
+    background-size: contain;
+    z-index: -1;
+  }
+}
+
+
+.choose-bg {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("/landing-page/ellipse-3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    // border: #1c1c1cbf solid 1px;
+    top: -20%;
+    left: -10%;
+    width: 100%;
+    max-width: 1000px;
+    height: 120%;
+    z-index: -1;
   }
 }

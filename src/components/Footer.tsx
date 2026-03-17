@@ -45,20 +45,17 @@ const Footer = () => {
   if (pathName === "/thank-you/") {
     return null;
   }
-  
+
   return (
     <footer
-      className={`lg:pt-10 pt-3 pb-3 ${pathName === "/landing-page/" ? "bg-[#D4EEF94D" : "bg-yellow-primary"}`}
+      className={`lg:pt-10 pt-3 pb-3 ${pathName === "/landing-page/" ? "bg-[#D4EEF9]/40" : "bg-yellow-primary"}`}
     >
       <Container>
         <div className="w-full">
           <div className="lg:grid grid-cols-3 lg:gap-[1rem] flex flex-col gap-7">
             {/* footer logo */}
             <div className="flex lg:justify-start justify-center">
-              <Link
-                href="/"
-                className="max-w-[12rem] h-[8rem] w-full aspect-[1/1] relative"
-              >
+              <div className="max-w-[12rem] h-[8rem] w-full aspect-[1/1] relative">
                 <Image
                   src={Logo}
                   alt="Logo"
@@ -66,7 +63,7 @@ const Footer = () => {
                   fill
                   className="object-contain"
                 />
-              </Link>
+              </div>
             </div>
             {/* footer logo end */}
 
@@ -105,16 +102,21 @@ const Footer = () => {
             {/* footer contact */}
             {pathName === "/landing-page/" ? (
               <div className="flex flex-col gap-5 w-fit md:ml-auto">
-                {contactData.slice(1).map((item, index) => (
-                  <Link
-                    key={index}
-                    href={item.href || "#"}
-                    className="text-black-primary font-semibold text-lg md:text-xl flex gap-2"
-                  >
-                    <span className="mt-1">{item.icon}</span>
-                    {item.label}
-                  </Link>
-                ))}
+                
+                <Link
+                  href={contactData[2].href || "#"}
+                  className="text-black-primary font-semibold text-lg md:text-xl flex gap-2"
+                >
+                  <span className="mt-1">{contactData[2].icon}</span>
+                  {contactData[2].label}
+                </Link>
+                <Link
+                  href={contactData[1].href || "#"}
+                  className="text-black-primary font-semibold text-lg md:text-xl flex gap-2"
+                >
+                  <span className="mt-1">{contactData[1].icon}</span>
+                  {contactData[1].label}
+                </Link>
               </div>
             ) : (
               <div className="flex flex-col gap-5">

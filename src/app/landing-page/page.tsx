@@ -11,12 +11,14 @@ import Banner from "./components/Banner";
 const page = () => {
   return (
     <main className="max_screen_width relative after:absolute after:inset-0 after:bg-[#FCFBEE] after:z-[-3]">
-      <Banner {...landingPageData.bannerData} />
-      <SlidingTitle titles={landingPageData.slidingText} />
-      <section className="py-10">
-        <Container className="bg-[#42212B]">
-          <Form2 />
-        </Container>
+      <section className="section-bg">
+        <Banner {...landingPageData.bannerData} />
+        <SlidingTitle titles={landingPageData.slidingText} />
+        <section className="py-10">
+          <Container className="bg-[#42212B]">
+            <Form2 />
+          </Container>
+        </section>
       </section>
       <ChefDrivenSection {...landingPageData.chefDrivenSection} />
       <WhyChooseSection {...landingPageData.whyChooseSection} />

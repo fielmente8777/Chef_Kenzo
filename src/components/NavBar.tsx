@@ -52,7 +52,7 @@ const NavBar = () => {
                 rel="noopener noreferrer"
                 href={contact.WhatsappCta}
                 label="enquire now"
-                className="text-lg uppercase md:block hidden text-white bg-[#1C1C1C] rounded-full font-semibold"
+                className="text-lg uppercase md:flex hidden text-white bg-[#1C1C1C] rounded-full font-semibold"
               />
             </div>
           </Container>

@@ -1,6 +1,7 @@
 import { Container, Section } from "@/components";
 import { CtaBtn } from "@/components/cta-btn/CtaBtn";
 import Image from "next/image";
+import ImageSlider from "./ImageSlider";
 
 interface ChefDrivenSectionProps {
   title: string;
@@ -20,14 +21,18 @@ const ChefDrivenSection: React.FC<ChefDrivenSectionProps> = ({
 }) => {
   return (
     <Section className="lg:py-8">
-      <Container className="">
+      <Container className="space-y-6">
+        <ImageSlider images={images} />
         <div className="lg:grid grid-cols-3 w-full relative">
           {images.map((image, index) => (
-            <div className="w-full aspect-[4/6] relative" key={index}>
+            <div
+              className="w-full md:block hidden aspect-[4/6] relative"
+              key={index}
+            >
               <Image src={image} alt={title} fill className="object-cover" />
             </div>
           ))}
-          <div className="absolute inset-0 flex items-center justify-center z-20">
+          <div className="md:absolute inset-0 flex items-center justify-center z-20">
             <ChefDrivenSectionCard
               title={title}
               description={description}
@@ -52,7 +57,7 @@ export const ChefDrivenSectionCard = ({
   action: { label: string; href: string };
 }) => {
   return (
-    <div className="w-full max-w-3xl flex flex-col items-center text-center  gap-5 relative after:absolute after:inset-0 after:z-[-2] after:bg-[rgba(252,251,238,0.95)] py-14 px-10 border-2 border-[#F2B9CA]">
+    <div className="w-full max-w-3xl md:py-14 py-6 md:px-10 px-4 flex flex-col items-center text-center  gap-5 relative after:absolute after:inset-0 after:z-[-2] after:bg-[rgba(252,251,238,0.95)] border-2 border-[#F2B9CA]">
       <h2 className="text-2xl lg:text-5xl text-line font-bold text-[#1C1C1C]">
         {title}
       </h2>

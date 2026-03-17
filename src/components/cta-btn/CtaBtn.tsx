@@ -46,7 +46,7 @@ export const CtaBtn = ({
     </Link>
   ) : (
     <button
-      className={`flex items-center justify-center px-5 py-3 gap-2 hover:scale-x-105 active:scale-95 transition-all duration-300 ease-in-out ${className}`}
+      className={`flex items-center text-nowrap justify-center px-5 py-3 gap-2 hover:scale-x-105 active:scale-95 transition-all duration-300 ease-in-out ${className}`}
       onClick={onClick}
       {...props}
     >

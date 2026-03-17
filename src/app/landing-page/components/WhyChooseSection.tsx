@@ -24,7 +24,7 @@ const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({
 }) => {
   return (
     <Section>
-      <Container className="grid md:grid-cols-2 grid-cols-1 items-center gap-6">
+      <Container className="grid md:grid-cols-2 grid-cols-1 items-center gap-6 choose-bg">
         <div className="relative w-full aspect-[4/3] md:block hidden">
           <Image src={image} alt="alt" fill className="object-contain" />
         </div>
