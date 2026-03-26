@@ -1,7 +1,13 @@
 export const enCodeText =
   encodeURIComponent(`Hello Chef Kenzo Team, I would like to enquire about catering services for my event.
-
 Please share menu options and pricing. Thank you.`);
+
+
+export const enCodedText2 = `Hi Chef Kenzo Team,
+I'm interested in your meal plans. Please help me choose the right plan.
+Thank you!`;
+
+
 export const contact = {
   email: "reservations@arkayamukteshwar.com",
   mapUrl:
@@ -16,6 +22,7 @@ export const contact = {
     linkedin: "https://in.linkedin.com/",
   },
   WhatsappCta: `https://wa.me/+918595299043?text=${enCodeText}`,
+  WhatsappCta2: `https://wa.me/+918595299043?text=${enCodedText2}`,
   formDomain: "chefkenzo",
   formHid: "",
 };

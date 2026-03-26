@@ -10,7 +10,7 @@ export const mealPlansPageData = {
     description:
       "Gurugram’s most trusted kitchen, now fueling your daily goals.",
     points: ["100% Fresh", "0% Frozen", "Completely Customizable"],
-    actions: { label: "Build Your Plan", href: contact.WhatsappCta },
+    actions: { label: "Build Your Plan", href: contact.WhatsappCta2 },
     note: "*Starting at just ₹299/Meal",
   },
 
@@ -46,7 +46,7 @@ export const mealPlansPageData = {
     ],
     action: {
       label: "Contact Us",
-      href: contact.WhatsappCta,
+      href: contact.WhatsappCta2,
     },
   },
 
@@ -81,7 +81,7 @@ export const mealPlansPageData = {
     ],
     action: {
       label: "Contact Us",
-      href: contact.WhatsappCta,
+      href: contact.WhatsappCta2,
     },
   },
 
@@ -139,7 +139,7 @@ export const mealPlansPageData = {
     ],
     action: {
       label: "Contact Us",
-      href: contact.WhatsappCta,
+      href: contact.WhatsappCta2,
     },
   },
 };
