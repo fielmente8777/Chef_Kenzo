@@ -45,7 +45,102 @@ const Footer = () => {
   if (pathName === "/thank-you/") {
     return null;
   }
+  if (pathName === "/healthy-meal-plans/") {
+    return (
+        <footer className={`lg:pt-10 pt-3 pb-3 bg-[#FCFBEE]`}>
+        <Container className="overflow-hidden">
+          <div className="lg:grid grid-cols-3 lg:gap-[1rem] flex flex-col gap-7 md:py-4">
+            {/* footer logo */}
+            <div className="flex lg:justify-start justify-center">
+              <div className="max-w-[12rem] w-full aspect-[4/3] relative">
+                <Image
+                  src={Logo}
+                  alt="Logo"
+                  priority={true}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
+            {/* footer logo end */}
 
+            {/* footer links */}
+            <Link
+              href={contactData[0].href || "#"}
+              className="text-black-primary font-semibold text-lg md:text-xl flex gap-2"
+            >
+              <span className="mt-1">
+                <LocationIcon />
+              </span>
+              {contactData[0].label}
+            </Link>
+
+            {/* footer links end */}
+
+            {/* footer contact */}
+            <div className="flex flex-col gap-5 w-fit md:ml-auto">
+              <Link
+                href={contactData[2].href || "#"}
+                className="text-black-primary font-semibold text-lg md:text-xl flex gap-2"
+              >
+                <span className="mt-1">{contactData[2].icon}</span>
+                {contactData[2].label}
+              </Link>
+              <Link
+                href={contactData[1].href || "#"}
+                className="text-black-primary font-semibold text-lg md:text-xl flex gap-2"
+              >
+                <span className="mt-1">{contactData[1].icon}</span>
+                {contactData[1].label}
+              </Link>
+            </div>
+
+            {/* footer contact end */}
+          </div>
+
+          <div className="border-t border-dashed scale-x-125 border-[#656565] my-5"></div>
+          <section className="flex justify-between flex-wrap gap-10 items-center text-lg max-Width">
+            {certificateData.map((item, index) => (
+              <div key={index} className=" ">
+                <div className="flex justify-between gap-5">
+                  <div className="relative aspect-[4/3] w-[130px]">
+                    <Image
+                      src={item.imageSrc}
+                      alt="LOGO"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="flex flex-col self-stretch my-auto w-[130px]">
+                    <div className="text-zinc-900">{item.title}</div>
+                    <div className="mt-1.5 text-stone-500">{item.value}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </section>
+        </Container>
+        <div className="h-[0.5px] bg-[#656565] my-5"></div>
+        <Container>
+          <div className="flex max-md:flex-col items-center justify-center gap-2">
+            <div className="flex gap-4">
+              <OutLineCopyRight />
+              <span className="text-[#656565] text-center">
+                2024 Kenzo Kissan India Private Limited
+              </span>{" "}
+            </div>
+
+            <span className="text-[#656565] text-center">
+              • All rights reserved
+            </span>
+            {/* <span className="text-[#656565] text-center">
+              • Designed & Developed by Eazotel
+            </span> */}
+          </div>
+        </Container>
+      </footer>
+    );
+  }
   return (
     <footer
       className={`lg:pt-10 pt-3 pb-3 ${pathName === "/landing-page/" ? "bg-[#D4EEF9]/40" : "bg-yellow-primary"}`}
@@ -102,7 +197,6 @@ const Footer = () => {
             {/* footer contact */}
             {pathName === "/landing-page/" ? (
               <div className="flex flex-col gap-5 w-fit md:ml-auto">
-                
                 <Link
                   href={contactData[2].href || "#"}
                   className="text-black-primary font-semibold text-lg md:text-xl flex gap-2"

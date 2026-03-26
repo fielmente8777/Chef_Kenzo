@@ -261,8 +261,7 @@ input:focus {
     content: "";
     position: absolute;
     background-repeat: no-repeat;
-    
-    
+
     inset-inline: 0;
   }
   &::before {
@@ -283,7 +282,6 @@ input:focus {
   }
 }
 
-
 .choose-bg {
   position: relative;
   &::before {
@@ -299,5 +297,21 @@ input:focus {
     max-width: 1000px;
     height: 120%;
     z-index: -1;
+  }
+}
+
+// hover animate-shacked button x direction
+.animate-shacked:hover {
+  animation: shake 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 0px);
+  }
+  100% {
+    transform: translate(-1px, 0px);
   }
 }

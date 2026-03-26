@@ -19,6 +19,10 @@ const NavBar = () => {
     case "/thank-you/":
       return null;
       break;
+    case "/healthy-meal-plans/":
+      return null;
+      break;
+      
     case "/landing-page/":
       return (
         <header className="py-4 max_screen_width relative after:absolute after:inset-0 after:bg-[#FCFBEE] after:z-[-3]">
