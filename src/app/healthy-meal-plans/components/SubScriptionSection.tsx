@@ -41,7 +41,7 @@ const SubScriptionSection: React.FC<SubScriptionSectionProps> = ({
         />
       </div>
       <div className="w-full md:block hidden">
-        <ImageCard cards={items} sectionId="flexibility" />
+        <ImageCard cards={items} sectionId="subscription" />
       </div>
     </Section>
   );

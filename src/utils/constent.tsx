@@ -3,9 +3,9 @@ export const enCodeText =
 Please share menu options and pricing. Thank you.`);
 
 
-export const enCodedText2 = `Hi Chef Kenzo Team,
-I'm interested in your meal plans. Please help me choose the right plan.
-Thank you!`;
+export const enCodedText2 = `Hello Team,
+
+I am interested in your meal plans. Let me know which option would be best suited for me.`;
 
 
 export const contact = {
