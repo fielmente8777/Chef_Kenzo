@@ -22,7 +22,7 @@ export const contact = {
     linkedin: "https://in.linkedin.com/",
   },
   WhatsappCta: `https://wa.me/+918595299043?text=${enCodeText}`,
-  WhatsappCta2: `https://wa.me/+918595299043?text=${enCodedText2}`,
+  WhatsappCta2: `https://wa.me/+919205140888?text=${enCodedText2}`,
   formDomain: "chefkenzo",
   formHid: "",
 };
