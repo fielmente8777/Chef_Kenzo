@@ -9,6 +9,8 @@ function Whatsapp() {
 
   let whatsappLink;
   switch (pathName) {
+    case "/":
+      return (whatsappLink = contact.WhatsappCta1);
     case "/healthy-meal-plans/":
       whatsappLink = contact.WhatsappCta2;
       break;
