@@ -9,7 +9,7 @@ function Call() {
   let call;
   switch (pathName) {
     case "/":
-      return (call = "tel:+919289016888");
+      call = "tel:+919289016888";
       break;
     case "/healthy-meal-plans/":
       call = "tel:+919205140888";

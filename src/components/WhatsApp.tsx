@@ -10,7 +10,7 @@ function Whatsapp() {
   let whatsappLink;
   switch (pathName) {
     case "/":
-      return (whatsappLink = contact.WhatsappCta1);
+      whatsappLink = contact.WhatsappCta1;
     case "/healthy-meal-plans/":
       whatsappLink = contact.WhatsappCta2;
       break;
@@ -18,6 +18,8 @@ function Whatsapp() {
       whatsappLink = contact.WhatsappCta;
       break;
   }
+
+
   return (
     <div className="fixed bottom-24 lg:left-3 left-4 z-20 cursor-pointer ">
       <Link
