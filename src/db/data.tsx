@@ -16,13 +16,14 @@ import {
   DataTypeProps,
   TwoColCardprops,
 } from "@/types/type";
+import { contact } from "@/utils/constent";
 
 const encodedText = `Hi Chef Kenzo Team!
 I’d like to enquire about catering services for an upcoming event.
 Please help me with menu options and pricing.
 Thank you!`;
 
-export const whatsappLink = `https://wa.me/+919289016888?text=${encodedText}`;
+export const whatsappLink = contact.WhatsappCta1;
 
 export const contactData: ContactUsProps[] = [
   {
