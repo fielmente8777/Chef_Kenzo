@@ -88,12 +88,12 @@ const Footer = () => {
                 
               </Link>
               <Link
-                href="tel:+91 92051 40888"
+                href={`tel:+919096907042`}
                 className="text-black-primary font-semibold text-lg md:text-xl flex gap-2"
               >
                 <span className="mt-1">{contactData[1].icon}</span>
                 {/* {contactData[1].label} */}
-                +91 92051 40888
+                +91 90969 07042
               </Link>
             </div>
 

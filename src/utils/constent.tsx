@@ -1,6 +1,5 @@
 export const enCodeText =
-  encodeURIComponent(`Hello Chef Kenzo Team, I would like to enquire about catering services for my event.
-Please share menu options and pricing. Thank you.`);
+  encodeURIComponent(`Hello, Im interested to learn more about chef kenzo`);
 
 export const enCodedText2 = `Hello Team,
 
@@ -19,7 +18,7 @@ export const contact = {
     instagram: "https://www.instagram.com/",
     linkedin: "https://in.linkedin.com/",
   },
-  WhatsappCta: `https://wa.me/+918595299043?text=${enCodeText}`,
+  WhatsappCta: `https://wa.me/+919289016888?text=${enCodeText}`,
   WhatsappCta1: `https://wa.me/+919289016888?text=${enCodeText}`,
   WhatsappCta2: `https://wa.me/+919205140888?text=${enCodedText2}`,
   formDomain: "chefkenzo",

@@ -8,17 +8,24 @@ function Whatsapp() {
   const pathName = usePathname();
 
   let whatsappLink;
-  switch (pathName) {
-    case "/":
-      whatsappLink = contact.WhatsappCta1;
-    case "/healthy-meal-plans/":
-      whatsappLink = contact.WhatsappCta2;
-      break;
-    default:
-      whatsappLink = contact.WhatsappCta;
-      break;
-  }
+  // switch (pathName) {
+  //   case "/":
+  //     whatsappLink = contact.WhatsappCta;
+  //   case "/healthy-meal-plans/":
+  //     whatsappLink = contact.WhatsappCta2;
+  //     break;
+  //   default:
+  //     whatsappLink = contact.WhatsappCta;
+  //     break;
+  // }
 
+  if (pathName === "/") {
+    whatsappLink = contact.WhatsappCta;
+  } else if (pathName === "/healthy-meal-plans/") {
+    whatsappLink = contact.WhatsappCta2;
+  } else {
+    whatsappLink = contact.WhatsappCta;
+  }
 
   return (
     <div className="fixed bottom-24 lg:left-3 left-4 z-20 cursor-pointer ">

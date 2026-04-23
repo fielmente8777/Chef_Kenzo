@@ -34,8 +34,8 @@ export const contactData: ContactUsProps[] = [
   },
   {
     icon: <OutLineCallWhite />,
-    label: " +91 92890 16888",
-    href: "tel:+91 9289016888",
+    label: " +91 90969 07042",
+    href: "tel:+9190969 07042",
   },
   {
     icon: <OutLineMailWhite />,
