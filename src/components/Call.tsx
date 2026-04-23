@@ -6,18 +6,18 @@ import { IoCall } from "react-icons/io5";
 function Call() {
   const pathName = usePathname();
 
-  let call;
-  switch (pathName) {
-    case "/":
-      call = "tel:+919289016888";
-      break;
-    case "/healthy-meal-plans/":
-      call = "tel:+919205140888";
-      break;
-    default:
-      call = "tel:+918595299043";
-      break;
-  }
+  let call = "tel:+9190969 07042";
+  // switch (pathName) {
+  //   case "/":
+  //     call = "tel:+919289016888";
+  //     break;
+  //   case "/healthy-meal-plans/":
+  //     call = "tel:+919205140888";
+  //     break;
+  //   default:
+  //     call = "tel:+918595299043";
+  //     break;
+  // }
 
   return (
     <div className="fixed bottom-10 lg:left-3  left-4 z-20 cursor-pointer">
